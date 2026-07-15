@@ -1,0 +1,50 @@
+---
+import { SITE } from '../consts';
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t-2 border-line bg-ink text-bg">
+  <!-- Marquee discret -->
+  <div class="marquee border-b-2 border-bg/30 py-3 font-mono text-sm uppercase tracking-widest">
+    <div class="marquee__track" aria-hidden="true">
+      Disponible pour de nouveaux projets — Jami Infante — Développeur — Disponible pour de nouveaux projets — Jami Infante — Développeur —
+    </div>
+    <span class="sr-only">Disponible pour de nouveaux projets.</span>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-4 py-14">
+    <!-- Bloc massif : nom en très grand -->
+    <a
+      href="/contact"
+      class="block font-display text-5xl sm:text-7xl md:text-8xl font-bold uppercase leading-none tracking-tighter hover:text-accent transition-colors duration-150"
+    >
+      Parlons-en<span class="text-accent">.</span>
+    </a>
+
+    <div class="mt-10 grid gap-8 sm:grid-cols-3 font-mono text-sm">
+      <div>
+        <p class="text-bg/50 uppercase mb-2">Email</p>
+        <a href={`mailto:${SITE.email}`} class="link-brutal break-all">{SITE.email}</a>
+      </div>
+      <div>
+        <p class="text-bg/50 uppercase mb-2">Réseaux</p>
+        <ul class="space-y-1">
+          <li><a href={SITE.github} class="link-brutal" rel="me noopener" target="_blank">GitHub ↗</a></li>
+          <li><a href={SITE.linkedin} class="link-brutal" rel="me noopener" target="_blank">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-bg/50 uppercase mb-2">Navigation</p>
+        <ul class="space-y-1">
+          <li><a href="/projets" class="link-brutal">Projets</a></li>
+          <li><a href="/a-propos" class="link-brutal">À propos</a></li>
+          <li><a href="/contact" class="link-brutal">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-12 border-t-2 border-bg/30 pt-4 font-mono text-xs text-bg/60 uppercase tracking-wide">
+      © {year} {SITE.name} — Construit avec Astro &amp; Tailwind
+    </p>
+  </div>
+</footer>

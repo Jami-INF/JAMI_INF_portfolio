@@ -1,0 +1,13 @@
+---
+/** Étiquette monospace bordée (langages, frameworks, outils, stack…). */
+interface Props {
+  label: string;
+}
+const { label } = Astro.props;
+---
+
+<span
+  class="inline-flex items-center border-2 border-line px-2.5 py-1 font-mono text-xs sm:text-sm leading-none whitespace-nowrap transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
+>
+  {label}
+</span>

@@ -1,0 +1,56 @@
+---
+import Tag from './Tag.astro';
+
+interface Props {
+  number: string;
+  title: string;
+  description: string;
+  stack: string[];
+  image: string;
+  href: string; // page détail
+  date?: string;
+}
+const { number, title, description, stack, image, href, date } = Astro.props;
+---
+
+<article
+  class="group relative flex flex-col border-2 border-line bg-bg transition-transform duration-150 hover:-translate-x-1 hover:-translate-y-1 focus-within:-translate-x-1 focus-within:-translate-y-1"
+>
+  <!-- En-tête : numéro + date -->
+  <div class="flex items-center justify-between border-b-2 border-line px-4 py-2 font-mono text-xs uppercase">
+    <span class="font-bold tabular-nums">{number}</span>
+    {date && <span class="text-muted">{date}</span>}
+  </div>
+
+  <!-- Visuel -->
+  <a href={href} class="block border-b-2 border-line" tabindex="-1" aria-hidden="true">
+    <img
+      src={image}
+      alt=""
+      width="1200"
+      height="675"
+      loading="lazy"
+      decoding="async"
+      class="aspect-video w-full object-cover"
+    />
+  </a>
+
+  <!-- Corps -->
+  <div class="flex flex-1 flex-col gap-4 p-4">
+    <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase leading-none tracking-tight">
+      <a href={href} class="after:absolute after:inset-0 focus:outline-none">
+        {title}
+      </a>
+    </h3>
+
+    <p class="text-sm leading-relaxed text-ink/80">{description}</p>
+
+    <ul class="mt-auto flex flex-wrap gap-2 pt-2">
+      {stack.map((s) => <li><Tag label={s} /></li>)}
+    </ul>
+
+    <div class="flex items-center gap-3 border-t-2 border-line pt-3 font-mono text-sm">
+      <span class="link-brutal font-bold">Voir le projet →</span>
+    </div>
+  </div>
+</article>

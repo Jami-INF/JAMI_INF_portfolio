@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// Projets phares (featured) triés par ordre.
+const all = await getCollection('projects');
+const featured = all
+  .filter((p) => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3);
+---
+
+<Base>
+  <!-- ── HERO plein écran ─────────────────────────────────────────── -->
+  <section
+    class="mx-auto flex min-h-[calc(100dvh-4rem)] max-w-6xl flex-col justify-center px-4 py-16"
+    aria-labelledby="hero-title"
+  >
+    <p class="font-mono text-sm uppercase tracking-widest text-muted">
+      Portfolio — 2026
+    </p>
+
+    <h1
+      id="hero-title"
+      class="mt-4 font-display font-bold uppercase leading-[0.85] tracking-tighter text-[18vw] sm:text-[15vw] lg:text-[12rem]"
+    >
+      Jami<br />Infante<span class="text-accent">.</span>
+    </h1>
+
+    <p class="mt-8 max-w-2xl text-xl sm:text-2xl leading-snug">
+      Développeur. Je construis des jeux, des applications web et
+      j'expérimente autour de l'<span class="bg-accent text-accent-ink px-1">intelligence artificielle</span>.
+    </p>
+
+    <div class="mt-10 flex flex-wrap gap-4 font-mono text-sm uppercase">
+      <a
+        href="/projets"
+        class="border-2 border-line bg-ink px-6 py-3 text-bg transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
+      >
+        Voir les projets →
+      </a>
+      <a
+        href="/contact"
+        class="border-2 border-line px-6 py-3 transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
+      >
+        Me contacter
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Projets phares ───────────────────────────────────────────── -->
+  <section class="mx-auto max-w-6xl px-4 py-8" aria-label="Projets phares">
+    <SectionHeading number="01" title="Projets phares" as="h2" />
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        featured.map((p) => (
+          <ProjectCard
+            number={String(p.data.order).padStart(2, '0')}
+            title={p.data.title}
+            description={p.data.description}
+            stack={p.data.stack}
+            image={p.data.image}
+            href={`/projets/${p.id}`}
+            date={p.data.date}
+          />
+        ))
+      }
+    </div>
+
+    <div class="mt-8 border-t-2 border-line pt-4">
+      <a href="/projets" class="link-brutal font-mono text-sm uppercase">
+        Tous les projets →
+      </a>
+    </div>
+  </section>
+</Base>

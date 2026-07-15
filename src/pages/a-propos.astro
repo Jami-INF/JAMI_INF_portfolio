@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Tag from '../components/Tag.astro';
+
+// Compétences groupées (contenu placeholder à affiner).
+const skills = {
+  Langages: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Python'],
+  Frameworks: ['Astro', 'React', 'Node.js', 'Tailwind CSS'],
+  Outils: ['Git', 'GitHub', 'Vercel', 'VS Code', 'Figma'],
+};
+
+// Parcours / expériences (placeholder à affiner).
+const timeline = [
+  {
+    year: '2024',
+    title: 'Projets personnels',
+    text: "Développement de plusieurs applications et jeux (JamRacing, MealGenius, Projet IA) pour explorer de nouvelles technologies.",
+  },
+  {
+    year: '2023',
+    title: 'Premiers projets web',
+    text: "Applications de gestion (Economax) et jeux (Démineur) — apprentissage des fondamentaux du développement front-end.",
+  },
+  {
+    year: '—',
+    title: 'Formation & apprentissage',
+    text: "Parcours en développement, en continu, autour du web et de la programmation.",
+  },
+];
+---
+
+<Base
+  title="À propos"
+  description="Parcours, expériences et compétences de Jami Infante, développeur."
+>
+  <section class="mx-auto max-w-4xl px-4 py-16">
+    <SectionHeading number="03" title="À propos" as="h1" />
+
+    <!-- Intro -->
+    <div class="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
+      <p class="text-2xl sm:text-3xl leading-tight font-display">
+        Je suis <span class="bg-accent text-accent-ink px-1">Jami Infante</span>,
+        développeur. J'aime construire des choses qui marchent,
+        des jeux aux applications utiles du quotidien.
+      </p>
+    </div>
+
+    <p class="mt-8 max-w-2xl leading-relaxed text-ink/80">
+      Ce portfolio rassemble mes projets personnels : des terrains de jeu pour
+      apprendre, tester des idées et progresser. Chaque projet est l'occasion
+      d'explorer une nouvelle techno ou un nouveau domaine — du rendu temps réel
+      à l'intelligence artificielle.
+    </p>
+
+    <!-- Parcours -->
+    <div class="mt-16">
+      <SectionHeading number="03.1" title="Parcours" as="h2" />
+      <ol class="mt-8 divide-y-2 divide-line border-2 border-line">
+        {
+          timeline.map((item) => (
+            <li class="grid gap-2 p-5 sm:grid-cols-[6rem_1fr]">
+              <span class="font-mono text-sm font-bold uppercase tabular-nums text-muted">
+                {item.year}
+              </span>
+              <div>
+                <h3 class="font-display text-xl font-bold uppercase tracking-tight">
+                  {item.title}
+                </h3>
+                <p class="mt-1 text-sm leading-relaxed text-ink/80">{item.text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+
+    <!-- Compétences -->
+    <div class="mt-16">
+      <SectionHeading number="03.2" title="Compétences" as="h2" />
+      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+        {
+          Object.entries(skills).map(([group, items]) => (
+            <div class="border-2 border-line p-5">
+              <h3 class="font-mono text-xs font-bold uppercase tracking-widest text-muted">
+                {group}
+              </h3>
+              <ul class="mt-4 flex flex-wrap gap-2">
+                {items.map((s) => (
+                  <li>
+                    <Tag label={s} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

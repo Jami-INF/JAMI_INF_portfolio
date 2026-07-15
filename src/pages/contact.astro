@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { SITE } from '../consts';
+
+const links = [
+  { label: 'Email', value: SITE.email, href: `mailto:${SITE.email}`, ext: false },
+  { label: 'GitHub', value: 'github.com/jami-inf', href: SITE.github, ext: true },
+  { label: 'LinkedIn', value: 'Jami Infante', href: SITE.linkedin, ext: true },
+];
+---
+
+<Base
+  title="Contact"
+  description="Contacter Jami Infante par email, GitHub ou LinkedIn."
+>
+  <section class="mx-auto max-w-4xl px-4 py-16">
+    <SectionHeading number="04" title="Contact" as="h1" />
+
+    <p class="mt-10 text-3xl sm:text-5xl font-display font-bold uppercase leading-none tracking-tighter">
+      Un projet, une idée<span class="text-accent">,</span><br />ou juste dire bonjour<span class="text-accent">?</span>
+    </p>
+
+    <p class="mt-8 max-w-2xl leading-relaxed text-ink/80">
+      Le plus simple reste l'email. Je réponds dès que possible. Vous me trouverez
+      aussi sur GitHub et LinkedIn.
+    </p>
+
+    <!-- Coordonnées -->
+    <ul class="mt-12 divide-y-2 divide-line border-2 border-line font-mono">
+      {
+        links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              target={l.ext ? '_blank' : undefined}
+              rel={l.ext ? 'me noopener' : undefined}
+              class="group flex flex-col gap-1 p-5 transition-colors duration-150 hover:bg-accent hover:text-accent-ink sm:flex-row sm:items-center sm:justify-between"
+            >
+              <span class="text-xs uppercase tracking-widest text-muted group-hover:text-accent-ink">
+                {l.label}
+              </span>
+              <span class="text-lg sm:text-2xl font-bold tracking-tight">
+                {l.value} {l.ext ? '↗' : '→'}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- CTA email direct -->
+    <div class="mt-12">
+      <a
+        href={`mailto:${SITE.email}`}
+        class="inline-block border-2 border-line bg-ink px-8 py-4 font-mono text-sm uppercase text-bg transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
+      >
+        M'écrire un email →
+      </a>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Base
+  title="Projets"
+  description="Tous les projets personnels de Jami Infante : jeux, applications web et expérimentations IA."
+>
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <SectionHeading number="02" title="Projets" as="h1" />
+
+    <p class="mt-6 max-w-2xl font-mono text-sm text-muted uppercase">
+      {projects.length} projets — jeux, applications & expérimentations.
+    </p>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        projects.map((p) => (
+          <ProjectCard
+            number={String(p.data.order).padStart(2, '0')}
+            title={p.data.title}
+            description={p.data.description}
+            stack={p.data.stack}
+            image={p.data.image}
+            href={`/projets/${p.id}`}
+            date={p.data.date}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Base>
