@@ -12,19 +12,38 @@ date: "2024"
 
 ## À propos de MealGenius
 
-MealGenius aide à composer des repas et à planifier la semaine sans prise de
-tête : génération de suggestions, gestion des recettes favorites et
-préparation de la liste de courses.
+MealGenius est une application React Native permettant de générer des idées de plats en fonction des ingrédients disponibles dans le réfrigérateur de l'utilisateur. L'application permet à l'utilisateur d'ajouter des aliments à son garde-manger et de les supprimer une fois consommés. De plus, il peut sélectionner des plats comme favoris et les sauvegarder dans une liste dédiée. Ce projet représente la partie API de l'application, développée avec Quarkus et utilisant une base de données MongoDB.
 
-> Descriptif provisoire — à affiner avec le contenu final.
+> L'application fonctionne a l'aide d'un service REST qui gère les utilisateurs, les plats, les ingrédients et les recettes.
 
-### Fonctionnalités
+## Indexes
+L'unique index est sur le champ 'name' de l'entité Food. C'est l'entité possédant le plus de recherches et c'est la seule nécessitant une facilitation et une optimisation des requêtes. C'est utile dans le cas où nous souhaitons rechercher une recette en fonction de divers ingrédients dans notre garde-manger.
 
-- Génération de menus selon des critères simples.
-- Gestion et sauvegarde des recettes.
-- Liste de courses dérivée automatiquement des repas planifiés.
+## Services
+Chaque entité possède un service qui permet de gérer les opérations CRUD. 
+Tous les services possèdent les opérations suivantes :
+- `GET /` : Récupère tous les éléments de l'entité
+- `GET /{id}` : Récupère l'élément de l'entité correspondant à l'id
+- `POST /` : Crée un nouvel élément de l'entité
+- `PUT /{id}` : Met à jour l'élément de l'entité correspondant à l'id
+- `DELETE /{id}` : Supprime l'élément de l'entité correspondant à l'id
 
-### Ce que j'ai appris
+Certains services possèdent des opérations supplémentaires :
+
+### Utilisateur (user)
+
+- `POST /{id}/addfood` : Ajoute un aliment au garde-manger de l'utilisateur correspondant à l'id. Si l'ingrédient donné ne possède pas d'id, il est ajouté à la base de données nourriture.
+
+- `POST /{id}/login/{email}/{password}` : Permet de vérifier que l'email et le mot de passe correspondent à l'utilisateur selectionné.
+
+### Plat (Meal)
+
+- `GET /get/{name}` : Récupère le plat correspondant au nom
+- `GET /search/{name}` : Récupère les plats contenant le nom voulu
+- `GET /users/{id}` : Récupère les plats que l'utilisateur peut cuisiner avec ce qu'il possède
+- `POST /{id}/addingredient` : Ajoute un ingrédient au plat correspondant à l'id. Si l'ingrédient ne possède pas d'ID, il est ajouté à la base de données ingrédients.
+
+## Ce que j'ai appris
 
 Modélisation de données côté application, gestion d'état et conception d'une
 interface claire pour une tâche du quotidien.

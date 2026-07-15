@@ -1,10 +1,10 @@
 ---
 title: "Economax"
-description: "Application de gestion et de suivi budgétaire : visualisation des dépenses, catégories et évolution des économies dans le temps."
-stack: ["JavaScript", "Chart.js", "LocalStorage", "CSS"]
+description: "Économax est une application reprenant le concept du site DealLabs en utilisant Symfony."
+stack: ["Symfony", "PHP", "MySQL", "Docker", "bootstrap"]
 image: "/projects/economax.svg"
-demo: "https://jami-inf.vercel.app/"
-github: "https://github.com/jami-inf"
+demo: ""
+github: "https://github.com/Jami-INF/Economax_Corentin_Jami"
 order: 3
 featured: true
 date: "2023"
@@ -12,19 +12,16 @@ date: "2023"
 
 ## À propos d'Economax
 
-Economax est un outil de gestion des finances personnelles : on y enregistre
-ses dépenses, on les catégorise et on suit l'évolution de ses économies grâce
-à des graphiques lisibles.
+Économax est une application reprenant le concept du site DealLabs en utilisant Symfony. Nous étions en équipe de deux et l’objectif était de reprendre le plus de fonctionnalités possible incluant les mails de notification, les alertes et toutes les fonctionnalités de base comme l’ajout de Deal ou les votes.
 
-> Descriptif provisoire — à affiner avec le contenu final.
+> Projet d'étude, note obtenue : 14/20
 
 ### Fonctionnalités
 
-- Saisie et catégorisation des transactions.
-- Visualisation des dépenses par catégorie.
-- Suivi de l'évolution du budget dans le temps.
+- Saisie et catégorisation des deals
+- Visualisation des deals par catégorie (Hot, New, etc...)
+- Noter les deals (température)
 
 ### Ce que j'ai appris
 
-Manipulation et persistance de données côté client, création de
-visualisations et conception d'un tableau de bord synthétique.
+Création d'une application complète avec base de donnée MySQL, dockerisation et front Bootstrap

@@ -3,71 +3,110 @@ import Base from '../layouts/Base.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Tag from '../components/Tag.astro';
 
-// Compétences groupées (contenu placeholder à affiner).
+// ⚠️ À REMPLIR — Expérience professionnelle (alternance puis salarié).
+// Ordre : du plus récent au plus ancien. `type` = badge (CDI, Alternance…).
+// `highlights` = 2–3 réalisations concrètes (impact, décisions techniques,
+// périmètre). C'est le cœur du portfolio pour un profil confirmé.
+const experiences = [
+  {
+    period: '2024 — Aujourd’hui',
+    role: 'Développeur — [Intitulé de poste]',
+    company: '[Entreprise]',
+    type: 'CDI',
+    highlights: [
+      'Réalisation clé n°1 — ce que tu as livré et son impact (perf, utilisateurs, périmètre…).',
+      'Réalisation clé n°2 — une décision technique dont tu es fier.',
+      'Réalisation clé n°3 — collaboration, ownership, mise en production…',
+    ],
+    stack: ['Symfony', 'PHP', 'React', 'MySQL', 'Docker'],
+  },
+  {
+    period: '2022 — 2024',
+    role: 'Développeur — Alternance',
+    company: '[Entreprise d’alternance]',
+    type: 'Alternance',
+    highlights: [
+      'Ce sur quoi tu as travaillé pendant l’alternance.',
+      'Une fonctionnalité / un projet livré de bout en bout.',
+    ],
+    stack: ['JavaScript', 'PHP', 'SQL'],
+  },
+];
+
+// Compétences groupées (à ajuster selon ta maîtrise réelle).
 const skills = {
-  Langages: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Python'],
-  Frameworks: ['Astro', 'React', 'Node.js', 'Tailwind CSS'],
-  Outils: ['Git', 'GitHub', 'Vercel', 'VS Code', 'Figma'],
+  Langages: ['JavaScript', 'TypeScript', 'PHP', 'HTML', 'CSS', 'Python'],
+  Frameworks: ['Symfony', 'React', 'React Native', 'Quarkus', 'Node.js', 'Astro'],
+  Outils: ['Git', 'Docker', 'MySQL', 'MongoDB', 'CI/CD', 'Vercel'],
 };
 
-// Parcours / expériences (placeholder à affiner).
-const timeline = [
+// Formation (optionnel — court, en complément de l'expérience).
+const formation = [
   {
     year: '2024',
-    title: 'Projets personnels',
-    text: "Développement de plusieurs applications et jeux (JamRacing, MealGenius, Projet IA) pour explorer de nouvelles technologies.",
-  },
-  {
-    year: '2023',
-    title: 'Premiers projets web',
-    text: "Applications de gestion (Economax) et jeux (Démineur) — apprentissage des fondamentaux du développement front-end.",
-  },
-  {
-    year: '—',
-    title: 'Formation & apprentissage',
-    text: "Parcours en développement, en continu, autour du web et de la programmation.",
+    title: '[Diplôme / Formation]',
+    text: '[École / Université] — spécialité développement.',
   },
 ];
 ---
 
 <Base
   title="À propos"
-  description="Parcours, expériences et compétences de Jami Infante, développeur."
+  description="Parcours, expérience professionnelle et compétences de Jami Infante, développeur (4 ans d'expérience)."
 >
   <section class="mx-auto max-w-4xl px-4 py-16">
     <SectionHeading number="03" title="À propos" as="h1" />
 
-    <!-- Intro -->
-    <div class="mt-10 grid gap-8 md:grid-cols-[1fr_auto] md:items-start">
+    <!-- Intro — ton confirmé, pas "j'apprends" -->
+    <div class="mt-10">
       <p class="text-2xl sm:text-3xl leading-tight font-display">
         Je suis <span class="bg-accent text-accent-ink px-1">Jami Infante</span>,
-        développeur. J'aime construire des choses qui marchent,
-        des jeux aux applications utiles du quotidien.
+        développeur avec <span class="bg-accent text-accent-ink px-1">4 ans d'expérience</span>.
+        Je conçois et livre des applications web, du back-end à l'interface.
       </p>
     </div>
 
     <p class="mt-8 max-w-2xl leading-relaxed text-ink/80">
-      Ce portfolio rassemble mes projets personnels : des terrains de jeu pour
-      apprendre, tester des idées et progresser. Chaque projet est l'occasion
-      d'explorer une nouvelle techno ou un nouveau domaine — du rendu temps réel
-      à l'intelligence artificielle.
+      Passé par l'alternance puis en poste, j'ai construit des applications
+      complètes en environnement pro — API, bases de données, interfaces — et je
+      continue d'explorer de nouvelles technologies à travers mes projets
+      personnels.
     </p>
 
-    <!-- Parcours -->
+    <!-- ── Expérience professionnelle (mise en avant) ─────────────── -->
     <div class="mt-16">
-      <SectionHeading number="03.1" title="Parcours" as="h2" />
-      <ol class="mt-8 divide-y-2 divide-line border-2 border-line">
+      <SectionHeading number="03.1" title="Expérience" as="h2" />
+      <ol class="mt-8 space-y-6">
         {
-          timeline.map((item) => (
-            <li class="grid gap-2 p-5 sm:grid-cols-[6rem_1fr]">
-              <span class="font-mono text-sm font-bold uppercase tabular-nums text-muted">
-                {item.year}
-              </span>
-              <div>
-                <h3 class="font-display text-xl font-bold uppercase tracking-tight">
-                  {item.title}
+          experiences.map((exp) => (
+            <li class="border-2 border-line">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-line px-5 py-3 font-mono text-xs uppercase">
+                <span class="tabular-nums text-muted">{exp.period}</span>
+                <span class="border-2 border-line bg-accent px-2 py-0.5 text-accent-ink">
+                  {exp.type}
+                </span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-2xl font-bold uppercase leading-none tracking-tight">
+                  {exp.role}
                 </h3>
-                <p class="mt-1 text-sm leading-relaxed text-ink/80">{item.text}</p>
+                <p class="mt-1 font-mono text-sm text-muted">{exp.company}</p>
+
+                <ul class="mt-4 space-y-2">
+                  {exp.highlights.map((h) => (
+                    <li class="relative pl-6 text-sm leading-relaxed text-ink/80 before:absolute before:left-0 before:font-mono before:text-ink before:content-['→']">
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+
+                <ul class="mt-5 flex flex-wrap gap-2 border-t-2 border-line pt-4">
+                  {exp.stack.map((s) => (
+                    <li>
+                      <Tag label={s} />
+                    </li>
+                  ))}
+                </ul>
               </div>
             </li>
           ))
@@ -75,7 +114,7 @@ const timeline = [
       </ol>
     </div>
 
-    <!-- Compétences -->
+    <!-- ── Compétences ────────────────────────────────────────────── -->
     <div class="mt-16">
       <SectionHeading number="03.2" title="Compétences" as="h2" />
       <div class="mt-8 grid gap-6 sm:grid-cols-3">
@@ -96,6 +135,28 @@ const timeline = [
           ))
         }
       </div>
+    </div>
+
+    <!-- ── Formation (compact) ────────────────────────────────────── -->
+    <div class="mt-16">
+      <SectionHeading number="03.3" title="Formation" as="h2" />
+      <ol class="mt-8 divide-y-2 divide-line border-2 border-line">
+        {
+          formation.map((item) => (
+            <li class="grid gap-2 p-5 sm:grid-cols-[6rem_1fr]">
+              <span class="font-mono text-sm font-bold uppercase tabular-nums text-muted">
+                {item.year}
+              </span>
+              <div>
+                <h3 class="font-display text-xl font-bold uppercase tracking-tight">
+                  {item.title}
+                </h3>
+                <p class="mt-1 text-sm leading-relaxed text-ink/80">{item.text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
     </div>
   </section>
 </Base>
