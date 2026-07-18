@@ -2,7 +2,7 @@
 title: "Computer Vision — IA"
 description: "Modèle d'IA capable d'identifier des objets sur des images de caméra de surveillance : projet tutoré mené en équipe de cinq, en tant que chef de projet."
 stack: ["Python", "OpenCV", "TensorFlow", "Keras"]
-image: "/projects/projet-ia.svg"
+image: "/projects/projet-ia.png"
 demo: ""
 github: ""
 order: 7

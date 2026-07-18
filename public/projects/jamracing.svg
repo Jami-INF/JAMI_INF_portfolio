@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="JamRacing — visuel provisoire">
-  <rect width="1200" height="675" fill="#efece1"/>
-  <rect x="8" y="8" width="1184" height="659" fill="none" stroke="#14130f" stroke-width="4"/>
-  <line x1="8" y1="120" x2="1192" y2="120" stroke="#14130f" stroke-width="3"/>
-  <rect x="8" y="8" width="180" height="112" fill="#c3f53c"/>
-  <text x="98" y="92" font-family="'Space Mono',monospace" font-size="64" font-weight="700" text-anchor="middle" fill="#14130f">01</text>
-  <text x="220" y="90" font-family="'Space Mono',monospace" font-size="34" fill="#14130f">// visuel provisoire</text>
-  <text x="600" y="410" font-family="'Space Grotesk','Archivo',sans-serif" font-size="132" font-weight="700" text-anchor="middle" fill="#14130f" letter-spacing="-4">JamRacing</text>
-</svg>

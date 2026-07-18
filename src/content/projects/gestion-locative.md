@@ -2,7 +2,7 @@
 title: "Bailiz — Gestion locative"
 description: "Application web de gestion locative : baux, états des lieux, quittances et documents générés en PDF, avec signature sur écran et données stockées en local."
 stack: ["React", "TypeScript", "Vite", "Dexie (IndexedDB)", "react-pdf", "PWA"]
-image: "/projects/placeholder.svg"
+image: "/projects/bailiz.png"
 demo: ""
 github: ""
 order: 3

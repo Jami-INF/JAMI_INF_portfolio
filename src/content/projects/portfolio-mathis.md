@@ -2,7 +2,7 @@
 title: "Portfolio — Mathis Detroussat"
 description: "Site vitrine statique conçu et développé de A à Z pour un chargé de projet événementiel : direction artistique sur-mesure, pipeline images automatisé et SEO complet."
 stack: ["Astro", "Tailwind CSS", "TypeScript", "sharp", "GitHub Actions"]
-image: "/projects/placeholder.svg"
+image: "/projects/mathis-detroussat.png"
 demo: "https://mathis-detroussat.fr"
 github: ""
 order: 1

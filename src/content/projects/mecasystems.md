@@ -2,7 +2,7 @@
 title: "MecaSystems"
 description: "Marketplace de pièces automobiles pour les professionnels de la réparation : interfaçage DMS (REST / SOAP), e-commerce, data et infrastructure. Mon quotidien de développeur full-stack."
 stack: ["React", "WinDev / WebDev", "HFSQL", "REST", "SOAP", "Python", "Docker", "Linux"]
-image: "/projects/placeholder.svg"
+image: "/projects/mecasystems.png"
 demo: "https://mecasystems.flauraud.fr/"
 github: ""
 order: 4
