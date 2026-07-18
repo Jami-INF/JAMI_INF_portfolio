@@ -1,19 +1,19 @@
 /** Métadonnées globales du site, centralisées. */
 export const SITE = {
   name: 'Jami Infante',
-  title: 'Jami Infante — Développeur',
+  title: 'Jami Infante — Développeur full-stack',
   description:
-    "Portfolio de Jami Infante, développeur. Sélection de projets personnels : jeux, applications web et expérimentations autour de l'IA.",
+    "Portfolio de Jami Infante, développeur full-stack avec 4 ans d'expérience. Applications web du back-end à l'interface, projets React / TypeScript et outils métier.",
   email: 'jamiinfante@gmail.com',
   github: 'https://github.com/jami-inf',
   linkedin: 'https://www.linkedin.com/in/jami-infante',
   ogImage: '/og.svg',
 } as const;
 
-/** Liens de navigation principaux (header). */
+/** Menu **/
 export const NAV = [
   { href: '/', label: 'Accueil' },
-  { href: '/projets', label: 'Projets' },
   { href: '/a-propos', label: 'À propos' },
+  { href: '/projets', label: 'Projets' },
   { href: '/contact', label: 'Contact' },
 ] as const;

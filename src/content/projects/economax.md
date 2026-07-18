@@ -5,8 +5,8 @@ stack: ["Symfony", "PHP", "MySQL", "Docker", "bootstrap"]
 image: "/projects/economax.svg"
 demo: ""
 github: "https://github.com/Jami-INF/Economax_Corentin_Jami"
-order: 3
-featured: true
+order: 6
+featured: false
 date: "2023"
 ---
 

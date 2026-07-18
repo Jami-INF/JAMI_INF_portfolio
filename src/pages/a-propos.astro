@@ -3,49 +3,114 @@ import Base from '../layouts/Base.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import Tag from '../components/Tag.astro';
 
-// ⚠️ À REMPLIR — Expérience professionnelle (alternance puis salarié).
-// Ordre : du plus récent au plus ancien. `type` = badge (CDI, Alternance…).
-// `highlights` = 2–3 réalisations concrètes (impact, décisions techniques,
-// périmètre). C'est le cœur du portfolio pour un profil confirmé.
+// Expérience professionnelle, du plus récent au plus ancien.
+// `type` = badge (CDI, Alternance…). `highlights` = réalisations concrètes.
 const experiences = [
   {
     period: '2024 — Aujourd’hui',
-    role: 'Développeur — [Intitulé de poste]',
-    company: '[Entreprise]',
+    role: 'Développeur full-stack',
+    company: 'EMIL FREY FRANCE (P.B.O) — MecaSystems',
     type: 'CDI',
     highlights: [
-      'Réalisation clé n°1 — ce que tu as livré et son impact (perf, utilisateurs, périmètre…).',
-      'Réalisation clé n°2 — une décision technique dont tu es fier.',
-      'Réalisation clé n°3 — collaboration, ownership, mise en production…',
+      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant MecaSystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…), pour éliminer les re-saisies entre systèmes.',
+      'Développement full-stack : interfaces web (React, WebDev) pour l’appli métier et l’e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs.',
+      'Data & bases de données : intégration des fichiers de stock, conception et évolution de bases HFSQL / SQL, optimisation de requêtes.',
+      'Performance & infrastructure : développement d’un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable et lancé depuis plusieurs postes, pour analyser le comportement des serveurs, du WAF et du load balancer, puis ajuster l’infrastructure.',
+      'Déploiement & exploitation : livraisons sur environnements Linux et Docker, mises en production, administration serveur (SSH, FTP), mise en place d’un NAS média pour les images du site.',
     ],
-    stack: ['Symfony', 'PHP', 'React', 'MySQL', 'Docker'],
+    stack: ['React', 'WinDev / WebDev', 'HFSQL', 'REST', 'SOAP', 'Python', 'Docker', 'Linux'],
   },
   {
-    period: '2022 — 2024',
-    role: 'Développeur — Alternance',
-    company: '[Entreprise d’alternance]',
+    period: '2023 — 2024',
+    role: 'Développeur web',
+    company: 'FLAURAUD — AURILIS GROUP (MecaSystems)',
+    type: 'CDI',
+    highlights: [
+      'Même produit et même poste que ci-dessus, avant le rachat du groupe par Emil Frey : missions centrées sur la modernisation et la migration de l’existant.',
+      'Reprise d’un applicatif vieux de 10 ans pour le remettre aux normes actuelles (architecture orientée objets, API, REST) et recréation graphique des éléments d’interface.',
+      'Changement d’ERP : développement des liens avec un nouvel ERP tiers, remplacement de requêtes en base par des procédures stockées et optimisation des traitements.',
+      'Création de la landing page publique du produit et maintenance des web services SOAP.',
+    ],
+    stack: ['WinDev / WebDev', 'HFSQL', 'SOAP', 'REST'],
+  },
+  {
+    period: 'Sept. 2022 — Sept. 2023',
+    role: 'Développeur web',
+    company: 'NUMTECH',
     type: 'Alternance',
     highlights: [
-      'Ce sur quoi tu as travaillé pendant l’alternance.',
-      'Une fonctionnalité / un projet livré de bout en bout.',
+      'Conception, développement et maintenance de sites web et d’outils internes pour des clients.',
+      'Exploitation d’API web et de données collectées par des capteurs, lus via Raspberry Pi.',
     ],
-    stack: ['JavaScript', 'PHP', 'SQL'],
+    stack: ['PHP', 'JavaScript', 'Tailwind CSS', 'Ajax / jQuery', 'MySQL', 'PostgreSQL', 'Raspberry Pi'],
+  },
+  {
+    period: 'Juil. — Août 2022',
+    role: 'Assistant ingénieur',
+    company: 'NUMTECH',
+    type: 'Job d’été',
+    highlights: [
+      'Développement sur différents projets internes et clients orientés web, dont des tâches de traitement de données pour un client.',
+      'Poursuite et aboutissement de l’outil de gestion démarré lors du stage.',
+    ],
+    stack: ['PHP', 'JavaScript', 'HTML / CSS'],
+  },
+  {
+    period: 'Avr. — Juin 2022',
+    role: 'Développeur web',
+    company: 'NUMTECH',
+    type: 'Stage',
+    highlights: [
+      'Développement d’un outil interne de gestion de licence client : analyse de l’existant, analyse des besoins, développement en PHP suivant le modèle MVC.',
+    ],
+    stack: ['PHP (MVC)', 'JavaScript', 'MySQL', 'PHPMailer', 'PHPOffice'],
   },
 ];
 
-// Compétences groupées (à ajuster selon ta maîtrise réelle).
+// Compétences groupées — front-end en premier (orientation React / TypeScript).
 const skills = {
-  Langages: ['JavaScript', 'TypeScript', 'PHP', 'HTML', 'CSS', 'Python'],
-  Frameworks: ['Symfony', 'React', 'React Native', 'Quarkus', 'Node.js', 'Astro'],
-  Outils: ['Git', 'Docker', 'MySQL', 'MongoDB', 'CI/CD', 'Vercel'],
+  'Front-end': ['React', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Tailwind CSS', 'Vue.js'],
+  'Back-end & API': ['API REST', 'SOAP', 'Node.js / Express', 'PHP', 'Symfony', 'MySQL', 'PostgreSQL', 'MongoDB', 'HFSQL'],
+  Langages: ['JavaScript / TypeScript', 'PHP', 'Python', 'Java', 'C', 'C#'],
+  'DevOps & outils': ['Docker', 'Git / GitHub', 'Linux', 'VS Code', 'Postman'],
 };
 
-// Formation (optionnel — court, en complément de l'expérience).
+// Formation, du plus récent au plus ancien.
 const formation = [
   {
-    year: '2024',
-    title: '[Diplôme / Formation]',
-    text: '[École / Université] — spécialité développement.',
+    year: '2022 — 2023',
+    title: 'Licence pro Application Web',
+    text: 'Développement de services web (Servlet/JSP, Spring Boot, Quarkus), applications PHP / Symfony, ReactJS, React Native. Bases de données SQL et noSQL, IoT (ESP, LoRa, Sigfox), gestion de projet, tests unitaires et d’intégration.',
+  },
+  {
+    year: '2020 — 2022',
+    title: 'DUT Informatique',
+    text: 'C, programmation orientée objets (Java, C#, C++), IHM (XAML, XML), UML, Merise, .NET, Linux, Shell, bases de données (PL/SQL, SQL, PRO-C Oracle), programmation web (PHP, JS, HTML, CSS).',
+  },
+  {
+    year: '2019 — 2020',
+    title: 'Baccalauréat STI2D option SIN',
+    text: 'Option Système d’Information et Numérique : Arduino, Python, réseau, codages binaire, hexadécimal, ASCII.',
+  },
+];
+
+// Passions — section plus personnelle.
+const passions = [
+  {
+    title: 'Mécanique automobile',
+    text: 'Grand fan d’automobile et assez manuel, j’ai appris par moi-même, à l’aide d’internet, à faire l’entretien de ma voiture personnelle ainsi que de celle de mes parents. Cette passion prend beaucoup de temps mais est très gratifiante.',
+  },
+  {
+    title: 'Jeux vidéo & simulation',
+    text: 'J’adore jouer à des jeux vidéo, surtout avec mes amis — en particulier les simulations réalistes pour leur immersion. J’ai d’ailleurs fabriqué mon propre simulateur de conduite en tubes de fer soudés.',
+  },
+  {
+    title: 'Réparation & bricolage',
+    text: 'La réparation d’appareils électroniques m’intéresse depuis l’enfance, une passion du bricolage transmise par mon père. Je répare tout type d’objet électronique, plus particulièrement des smartphones : dextérité, concentration et précision.',
+  },
+  {
+    title: 'Sport en salle',
+    text: 'Je pratique la musculation depuis un an et demi, à raison de trois séances par semaine.',
   },
 ];
 ---
@@ -71,6 +136,13 @@ const formation = [
       complètes en environnement pro — API, bases de données, interfaces — et je
       continue d'explorer de nouvelles technologies à travers mes projets
       personnels.
+    </p>
+
+    <p class="mt-4 max-w-2xl leading-relaxed text-ink/80">
+      Je ne me suis jamais éloigné du milieu de l'informatique depuis le lycée,
+      au moment où j'ai fait mes premiers projets personnels et scolaires. Cette
+      curiosité m'a permis de découvrir les différents langages de programmation
+      de manière autodidacte, avant même de m'orienter vers cette voie.
     </p>
 
     <!-- ── Expérience professionnelle (mise en avant) ─────────────── -->
@@ -117,7 +189,7 @@ const formation = [
     <!-- ── Compétences ────────────────────────────────────────────── -->
     <div class="mt-16">
       <SectionHeading number="03.2" title="Compétences" as="h2" />
-      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      <div class="mt-8 grid gap-6 sm:grid-cols-2">
         {
           Object.entries(skills).map(([group, items]) => (
             <div class="border-2 border-line p-5">
@@ -157,6 +229,23 @@ const formation = [
           ))
         }
       </ol>
+    </div>
+
+    <!-- ── Passions ───────────────────────────────────────────────── -->
+    <div class="mt-16">
+      <SectionHeading number="03.4" title="Passions" as="h2" />
+      <div class="mt-8 grid gap-6 sm:grid-cols-2">
+        {
+          passions.map((p) => (
+            <div class="border-2 border-line p-5">
+              <h3 class="font-display text-xl font-bold uppercase tracking-tight">
+                {p.title}
+              </h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/80">{p.text}</p>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </section>
 </Base>

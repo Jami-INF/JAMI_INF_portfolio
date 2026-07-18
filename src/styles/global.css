@@ -98,8 +98,13 @@
     color: var(--color-accent-ink);
   }
 
-  /* Marquee discret (respecte reduced-motion via la règle ci-dessus) */
+  /* Marquee discret (respecte reduced-motion via la règle ci-dessus).
+     position: relative est indispensable : le <span class="sr-only"> absolu
+     placé après la piste se positionnerait sinon par rapport à la page, à
+     droite de la piste (~2× la largeur du viewport), hors du overflow:hidden
+     — ce qui créait une barre de scroll horizontale « dans le vide ». */
   .marquee {
+    position: relative;
     overflow: hidden;
     white-space: nowrap;
   }

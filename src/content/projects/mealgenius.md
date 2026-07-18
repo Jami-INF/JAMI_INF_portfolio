@@ -5,8 +5,8 @@ stack: ["React", "TypeScript", "Node.js", "API REST"]
 image: "/projects/mealgenius.svg"
 demo: "https://jami-inf.vercel.app/"
 github: "https://github.com/jami-inf"
-order: 2
-featured: true
+order: 5
+featured: false
 date: "2024"
 ---
 
