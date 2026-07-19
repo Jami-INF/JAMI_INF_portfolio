@@ -1,130 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import SectionHeading from '../components/SectionHeading.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+import PassionCard from '../components/PassionCard.astro';
+import Highlight from '../components/Highlight.astro';
+import Label from '../components/Label.astro';
+import Heading from '../components/Heading.astro';
 import Tag from '../components/Tag.astro';
-
-// Expérience professionnelle, du plus récent au plus ancien.
-// `type` = badge (CDI, Alternance…). `highlights` = réalisations concrètes.
-const experiences = [
-  {
-    period: '2024 — Aujourd’hui',
-    role: 'Développeur full-stack',
-    company: 'EMIL FREY FRANCE (P.B.O) — MecaSystems',
-    type: 'CDI',
-    logo: '/experiences/EFF-logo.png',
-    // Logo blanc sur transparence → fond sombre obligatoire pour le voir.
-    logoDark: false,
-    highlights: [
-      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant MecaSystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…), pour éliminer les re-saisies entre systèmes.',
-      'Développement full-stack : interfaces web (React, WebDev) pour l’appli métier et l’e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs.',
-      'Data & bases de données : intégration des fichiers de stock, conception et évolution de bases HFSQL / SQL, optimisation de requêtes.',
-      'Performance & infrastructure : développement d’un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable et lancé depuis plusieurs postes, pour analyser le comportement des serveurs, du WAF et du load balancer, puis ajuster l’infrastructure.',
-      'Déploiement & exploitation : livraisons sur environnements Linux et Docker, mises en production, administration serveur (SSH, FTP), mise en place d’un NAS média pour les images du site.',
-    ],
-    stack: ['React', 'WinDev / WebDev', 'HFSQL', 'REST', 'SOAP', 'Python', 'Docker', 'Linux'],
-  },
-  {
-    period: '2023 — 2024',
-    role: 'Développeur web',
-    company: 'FLAURAUD — AURILIS GROUP (MecaSystems)',
-    type: 'CDI',
-    logo: '/experiences/FLD-logo.png',
-    highlights: [
-      'Même produit et même poste que ci-dessus, avant le rachat du groupe par Emil Frey : missions centrées sur la modernisation et la migration de l’existant.',
-      'Reprise d’un applicatif vieux de 10 ans pour le remettre aux normes actuelles (architecture orientée objets, API, REST) et recréation graphique des éléments d’interface.',
-      'Changement d’ERP : développement des liens avec un nouvel ERP tiers, remplacement de requêtes en base par des procédures stockées et optimisation des traitements.',
-      'Création de la landing page publique du produit et maintenance des web services SOAP.',
-    ],
-    stack: ['WinDev / WebDev', 'HFSQL', 'SOAP', 'REST'],
-  },
-  {
-    period: 'Sept. 2022 — Sept. 2023',
-    role: 'Développeur web',
-    company: 'NUMTECH',
-    type: 'Alternance',
-    logo: '/experiences/NT-logo.png',
-    highlights: [
-      'Conception, développement et maintenance de sites web et d’outils internes pour des clients.',
-      'Exploitation d’API web et de données collectées par des capteurs, lus via Raspberry Pi.',
-    ],
-    stack: ['PHP', 'JavaScript', 'Tailwind CSS', 'Ajax / jQuery', 'MySQL', 'PostgreSQL', 'Raspberry Pi'],
-  },
-  {
-    period: 'Juil. — Août 2022',
-    role: 'Assistant ingénieur',
-    company: 'NUMTECH',
-    type: 'Job d’été',
-    logo: '/experiences/NT-logo.png',
-    highlights: [
-      'Développement sur différents projets internes et clients orientés web, dont des tâches de traitement de données pour un client.',
-      'Poursuite et aboutissement de l’outil de gestion démarré lors du stage.',
-    ],
-    stack: ['PHP', 'JavaScript', 'HTML / CSS'],
-  },
-  {
-    period: 'Avr. — Juin 2022',
-    role: 'Développeur web',
-    company: 'NUMTECH',
-    type: 'Stage',
-    logo: '/experiences/NT-logo.png',
-    highlights: [
-      'Développement d’un outil interne de gestion de licence client : analyse de l’existant, analyse des besoins, développement en PHP suivant le modèle MVC.',
-    ],
-    stack: ['PHP (MVC)', 'JavaScript', 'MySQL', 'PHPMailer', 'PHPOffice'],
-  },
-];
-
-// Compétences groupées — front-end en premier (orientation React / TypeScript).
-const skills = {
-  'Front-end': ['React', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Tailwind CSS', 'Vue.js'],
-  'Back-end & API': ['API REST', 'SOAP', 'Node.js / Express', 'PHP', 'Symfony', 'MySQL', 'PostgreSQL', 'MongoDB', 'HFSQL'],
-  Langages: ['JavaScript / TypeScript', 'PHP', 'Python', 'Java', 'C', 'C#'],
-  'DevOps & outils': ['Docker', 'Git / GitHub', 'Linux', 'VS Code', 'Postman'],
-};
-
-// Formation, du plus récent au plus ancien.
-const formation = [
-  {
-    year: '2022 — 2023',
-    title: 'Licence pro Application Web',
-    text: 'Développement de services web (Servlet/JSP, Spring Boot, Quarkus), applications PHP / Symfony, ReactJS, React Native. Bases de données SQL et noSQL, IoT (ESP, LoRa, Sigfox), gestion de projet, tests unitaires et d’intégration.',
-  },
-  {
-    year: '2020 — 2022',
-    title: 'DUT Informatique',
-    text: 'C, programmation orientée objets (Java, C#, C++), IHM (XAML, XML), UML, Merise, .NET, Linux, Shell, bases de données (PL/SQL, SQL, PRO-C Oracle), programmation web (PHP, JS, HTML, CSS).',
-  },
-  {
-    year: '2019 — 2020',
-    title: 'Baccalauréat STI2D option SIN',
-    text: 'Option Système d’Information et Numérique : Arduino, Python, réseau, codages binaire, hexadécimal, ASCII.',
-  },
-];
-
-// Passions — section plus personnelle.
-// `image` : pictogramme SVG (remplaçable par une photo dans /public/passions).
-const passions = [
-  {
-    title: 'Mécanique automobile',
-    image: '/passions/mecanique.jpg',
-    text: 'Grand fan d’automobile et assez manuel, j’ai appris par moi-même, à l’aide d’internet, à faire l’entretien de ma voiture personnelle ainsi que de celle de mes parents. Cette passion prend beaucoup de temps mais est très gratifiante.',
-  },
-  {
-    title: 'Jeux vidéo & simulation',
-    image: '/passions/JamRacing.jpg',
-    text: 'J’adore jouer à des jeux vidéo, surtout avec mes amis — en particulier les simulations réalistes pour leur immersion. J’ai d’ailleurs fabriqué mon propre simulateur de conduite en tubes de fer soudés.',
-  },
-  {
-    title: 'Réparation & bricolage',
-    image: '/passions/atelier.avif',
-    text: 'La réparation d’appareils électroniques m’intéresse depuis l’enfance, une passion du bricolage transmise par mon père. Je répare tout type d’objet électronique, plus particulièrement des smartphones : dextérité, concentration et précision.',
-  },
-  {
-    title: 'Sport en salle',
-    image: '/passions/basic.jpg',
-    text: 'Je pratique la musculation depuis un an et demi, à raison de trois séances par semaine.',
-  },
-];
+import { experiences, skills, formation, passions } from '../data/about';
 ---
 
 <Base
@@ -137,9 +20,9 @@ const passions = [
     <!-- Intro — ton confirmé, pas "j'apprends" -->
     <div class="mt-10">
       <p class="text-2xl sm:text-3xl leading-tight font-display">
-        Je suis <span class="bg-accent text-accent-ink px-1">Jami Infante</span>,
-        développeur avec <span class="bg-accent text-accent-ink px-1">4 ans d'expérience</span>.
-        Je conçois et livre des applications web, du back-end à l'interface.
+        Je suis <Highlight>Jami Infante</Highlight>, développeur avec
+        <Highlight>4 ans d'expérience</Highlight>. Je conçois et livre des
+        applications web, du back-end à l'interface.
       </p>
     </div>
 
@@ -161,57 +44,7 @@ const passions = [
     <div class="mt-16">
       <SectionHeading number="03.1" title="Expérience" as="h2" />
       <ol class="mt-8 space-y-6">
-        {
-          experiences.map((exp) => (
-            <li class="border-2 border-line">
-              <div class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-line px-5 py-3 font-mono text-xs uppercase">
-                <span class="tabular-nums text-muted">{exp.period}</span>
-                <span class="border-2 border-line bg-accent px-2 py-0.5 text-accent-ink">
-                  {exp.type}
-                </span>
-              </div>
-              <div class="p-5">
-                <div class="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 class="font-display text-2xl font-bold uppercase leading-none tracking-tight">
-                      {exp.role}
-                    </h3>
-                    <p class="mt-1 font-mono text-sm text-muted">{exp.company}</p>
-                  </div>
-                  {exp.logo && (
-                    <img
-                      src={exp.logo}
-                      alt={`Logo ${exp.company}`}
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      class:list={[
-                        'h-14 w-14 shrink-0 border-2 border-line object-contain p-1.5',
-                        exp.logoDark ? 'bg-ink' : 'bg-white',
-                      ]}
-                    />
-                  )}
-                </div>
-
-                <ul class="mt-4 space-y-2">
-                  {exp.highlights.map((h) => (
-                    <li class="relative pl-6 text-sm leading-relaxed text-ink/80 before:absolute before:left-0 before:font-mono before:text-ink before:content-['→']">
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-
-                <ul class="mt-5 flex flex-wrap gap-2 border-t-2 border-line pt-4">
-                  {exp.stack.map((s) => (
-                    <li>
-                      <Tag label={s} />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))
-        }
+        {experiences.map((exp) => <ExperienceCard experience={exp} />)}
       </ol>
     </div>
 
@@ -222,9 +55,9 @@ const passions = [
         {
           Object.entries(skills).map(([group, items]) => (
             <div class="border-2 border-line p-5">
-              <h3 class="font-mono text-xs font-bold uppercase tracking-widest text-muted">
+              <Label as="h3" size="xs" muted class="font-bold tracking-widest">
                 {group}
-              </h3>
+              </Label>
               <ul class="mt-4 flex flex-wrap gap-2">
                 {items.map((s) => (
                   <li>
@@ -245,13 +78,11 @@ const passions = [
         {
           formation.map((item) => (
             <li class="grid gap-2 p-5 sm:grid-cols-[6rem_1fr]">
-              <span class="font-mono text-sm font-bold uppercase tabular-nums text-muted">
+              <Label as="span" muted class="font-bold tabular-nums">
                 {item.year}
-              </span>
+              </Label>
               <div>
-                <h3 class="font-display text-xl font-bold uppercase tracking-tight">
-                  {item.title}
-                </h3>
+                <Heading as="h3" size="xs">{item.title}</Heading>
                 <p class="mt-1 text-sm leading-relaxed text-ink/80">{item.text}</p>
               </div>
             </li>
@@ -264,29 +95,7 @@ const passions = [
     <div class="mt-16">
       <SectionHeading number="03.4" title="Passions" as="h2" />
       <div class="mt-8 grid gap-6 sm:grid-cols-2">
-        {
-          passions.map((p) => (
-            <div class="border-2 border-line">
-              {p.image && (
-                <img
-                  src={p.image}
-                  alt=""
-                  width="1200"
-                  height="675"
-                  loading="lazy"
-                  decoding="async"
-                  class="aspect-video w-full border-b-2 border-line object-cover"
-                />
-              )}
-              <div class="p-5">
-                <h3 class="font-display text-xl font-bold uppercase tracking-tight">
-                  {p.title}
-                </h3>
-                <p class="mt-3 text-sm leading-relaxed text-ink/80">{p.text}</p>
-              </div>
-            </div>
-          ))
-        }
+        {passions.map((p) => <PassionCard passion={p} />)}
       </div>
     </div>
   </section>

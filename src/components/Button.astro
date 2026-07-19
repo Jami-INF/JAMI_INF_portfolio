@@ -1,0 +1,36 @@
+---
+/**
+ * Bouton-lien brutaliste : cadre 2px, hover accent.
+ * `solid` = fond encre (action principale), `outline` = contour seul.
+ */
+interface Props {
+  href: string;
+  variant?: 'solid' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  /** Lien externe : ouvre un nouvel onglet avec rel="noopener". */
+  external?: boolean;
+  class?: string;
+}
+
+const sizes = {
+  sm: 'px-5 py-2.5',
+  md: 'px-6 py-3',
+  lg: 'px-8 py-4',
+};
+
+const { href, variant = 'outline', size = 'md', external = false, class: cls } = Astro.props;
+---
+
+<a
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener' : undefined}
+  class:list={[
+    'inline-block border-2 border-line font-mono text-sm uppercase transition-colors duration-150 hover:bg-accent hover:text-accent-ink',
+    variant === 'solid' && 'bg-ink text-bg',
+    sizes[size],
+    cls,
+  ]}
+>
+  <slot />
+</a>

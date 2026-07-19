@@ -1,0 +1,59 @@
+---
+/** Carte d'expérience professionnelle (page À propos). */
+import type { Experience } from '../data/about';
+import Heading from './Heading.astro';
+import Label from './Label.astro';
+import FramedImage from './FramedImage.astro';
+import Tag from './Tag.astro';
+
+interface Props {
+  experience: Experience;
+}
+const { experience: exp } = Astro.props;
+---
+
+<li class="border-2 border-line">
+  <Label
+    as="div"
+    size="xs"
+    class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-line px-5 py-3"
+  >
+    <span class="tabular-nums text-muted">{exp.period}</span>
+    <span class="border-2 border-line bg-accent px-2 py-0.5 text-accent-ink">
+      {exp.type}
+    </span>
+  </Label>
+
+  <div class="p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <Heading as="h3" size="sm">{exp.role}</Heading>
+        <p class="mt-1 font-mono text-sm text-muted">{exp.company}</p>
+      </div>
+      {exp.logo && (
+        <FramedImage
+          src={exp.logo}
+          alt={`Logo ${exp.company}`}
+          variant="thumb"
+          class={exp.logoDark ? 'bg-ink' : 'bg-white'}
+        />
+      )}
+    </div>
+
+    <ul class="mt-4 space-y-2">
+      {exp.highlights.map((h) => (
+        <li class="relative pl-6 text-sm leading-relaxed text-ink/80 before:absolute before:left-0 before:font-mono before:text-ink before:content-['→']">
+          {h}
+        </li>
+      ))}
+    </ul>
+
+    <ul class="mt-5 flex flex-wrap gap-2 border-t-2 border-line pt-4">
+      {exp.stack.map((s) => (
+        <li>
+          <Tag label={s} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</li>

@@ -117,4 +117,60 @@
     from { transform: translateX(0); }
     to   { transform: translateX(-100%); }
   }
+
+  /* ── Contenu markdown (fiches projets) ─────────────────────────────
+     Mise en forme minimale, sans plugin typography. */
+  .prose-brutal :where(h2) {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-line);
+  }
+  .prose-brutal :where(h3) {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-brutal :where(p) {
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  .prose-brutal :where(ul) {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+  }
+  .prose-brutal :where(li) {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  .prose-brutal :where(li)::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    color: var(--color-ink);
+  }
+  .prose-brutal :where(blockquote) {
+    border-left: 4px solid var(--color-accent);
+    padding-left: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    margin: 1.5rem 0;
+  }
+  .prose-brutal :where(a) {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
 }

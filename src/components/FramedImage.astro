@@ -1,0 +1,48 @@
+---
+/**
+ * Image encadrée du design system.
+ * - `banner` : ratio 16:9 pleine largeur, recadrée (aperçus projets, passions)
+ * - `thumb`  : vignette carrée, contenue (logos d'expérience)
+ * `frame` : cadre sur les 4 côtés, seulement en bas (séparateur de carte), ou aucun.
+ */
+interface Props {
+  src: string;
+  alt?: string;
+  variant?: 'banner' | 'thumb';
+  frame?: 'full' | 'bottom' | 'none';
+  /** Désactive le lazy-loading (image au-dessus de la ligne de flottaison). */
+  eager?: boolean;
+  class?: string;
+}
+
+const variants = {
+  banner: { classes: 'aspect-video w-full object-cover', width: 1200, height: 675 },
+  thumb: { classes: 'h-14 w-14 shrink-0 object-contain p-1.5', width: 56, height: 56 },
+};
+
+const frames = {
+  full: 'border-2 border-line',
+  bottom: 'border-b-2 border-line',
+  none: '',
+};
+
+const {
+  src,
+  alt = '',
+  variant = 'banner',
+  frame = 'full',
+  eager = false,
+  class: cls,
+} = Astro.props;
+const v = variants[variant];
+---
+
+<img
+  src={src}
+  alt={alt}
+  width={v.width}
+  height={v.height}
+  loading={eager ? 'eager' : 'lazy'}
+  decoding="async"
+  class:list={[v.classes, frames[frame], cls]}
+/>

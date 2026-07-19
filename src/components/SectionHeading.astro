@@ -3,18 +3,20 @@
  * Titre de section brutaliste avec numérotation (01, 02…).
  * Le numéro est en monospace, le titre en display XXL.
  */
+import Heading from './Heading.astro';
+import Label from './Label.astro';
+
 interface Props {
   number: string; // ex. "01"
   title: string;
   as?: 'h1' | 'h2';
 }
 const { number, title, as = 'h2' } = Astro.props;
-const Tag = as;
 ---
 
 <div class="flex items-end gap-4 border-b-2 border-line pb-3">
-  <span class="font-mono text-sm font-bold text-muted tabular-nums shrink-0">{number}</span>
-  <Tag class="font-display text-3xl sm:text-4xl md:text-5xl uppercase leading-none tracking-tight">
+  <Label muted class="font-bold tabular-nums shrink-0">{number}</Label>
+  <Heading as={as} size="none" class="text-3xl sm:text-4xl md:text-5xl leading-none tracking-tight">
     {title}
-  </Tag>
+  </Heading>
 </div>

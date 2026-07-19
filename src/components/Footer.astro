@@ -1,5 +1,7 @@
 ---
 import { SITE } from '../consts';
+import Heading from './Heading.astro';
+import Label from './Label.astro';
 const year = new Date().getFullYear();
 ---
 
@@ -14,27 +16,29 @@ const year = new Date().getFullYear();
 
   <div class="mx-auto max-w-6xl px-4 py-14">
     <!-- Bloc massif : nom en très grand -->
-    <a
+    <Heading
+      as="a"
       href="/contact"
-      class="block font-display text-5xl sm:text-7xl md:text-8xl font-bold uppercase leading-none tracking-tighter hover:text-accent transition-colors duration-150"
+      size="xl"
+      class="block md:text-8xl hover:text-accent transition-colors duration-150"
     >
       Parlons-en<span class="text-accent">.</span>
-    </a>
+    </Heading>
 
     <div class="mt-10 grid gap-8 sm:grid-cols-3 font-mono text-sm">
       <div>
-        <p class="text-bg/50 uppercase mb-2">Email</p>
+        <Label as="p" class="text-bg/50 mb-2">Email</Label>
         <a href={`mailto:${SITE.email}`} class="link-brutal break-all">{SITE.email}</a>
       </div>
       <div>
-        <p class="text-bg/50 uppercase mb-2">Réseaux</p>
+        <Label as="p" class="text-bg/50 mb-2">Réseaux</Label>
         <ul class="space-y-1">
           <li><a href={SITE.github} class="link-brutal" rel="me noopener" target="_blank">GitHub ↗</a></li>
           <li><a href={SITE.linkedin} class="link-brutal" rel="me noopener" target="_blank">LinkedIn ↗</a></li>
         </ul>
       </div>
       <div>
-        <p class="text-bg/50 uppercase mb-2">Navigation</p>
+        <Label as="p" class="text-bg/50 mb-2">Navigation</Label>
         <ul class="space-y-1">
           <li><a href="/projets" class="link-brutal">Projets</a></li>
           <li><a href="/a-propos" class="link-brutal">À propos</a></li>

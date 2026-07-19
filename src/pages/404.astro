@@ -1,36 +1,31 @@
 ---
 import Base from '../layouts/Base.astro';
+import Heading from '../components/Heading.astro';
+import Label from '../components/Label.astro';
+import Button from '../components/Button.astro';
 ---
 
 <Base title="404 — Page introuvable" description="Cette page n'existe pas.">
   <section
     class="mx-auto flex min-h-[calc(100dvh-4rem)] max-w-6xl flex-col justify-center px-4 py-16"
   >
-    <p class="font-mono text-sm uppercase tracking-widest text-muted">Erreur</p>
+    <Label as="p" muted class="tracking-widest">Erreur</Label>
 
-    <h1
-      class="mt-4 font-display font-bold uppercase leading-[0.8] tracking-tighter text-[30vw] sm:text-[20rem]"
+    <Heading
+      as="h1"
+      size="none"
+      class="mt-4 leading-[0.8] tracking-tighter text-[30vw] sm:text-[20rem]"
     >
       4<span class="text-accent">0</span>4
-    </h1>
+    </Heading>
 
     <p class="mt-6 max-w-xl text-xl sm:text-2xl leading-snug">
       Cette page n'existe pas — ou plus. Le lien est peut-être cassé.
     </p>
 
-    <div class="mt-10 flex flex-wrap gap-4 font-mono text-sm uppercase">
-      <a
-        href="/"
-        class="border-2 border-line bg-ink px-6 py-3 text-bg transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
-      >
-        ← Retour à l'accueil
-      </a>
-      <a
-        href="/projets"
-        class="border-2 border-line px-6 py-3 transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
-      >
-        Voir les projets
-      </a>
+    <div class="mt-10 flex flex-wrap gap-4">
+      <Button href="/" variant="solid">← Retour à l'accueil</Button>
+      <Button href="/projets">Voir les projets</Button>
     </div>
   </section>
 </Base>

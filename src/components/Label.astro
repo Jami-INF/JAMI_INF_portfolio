@@ -1,0 +1,32 @@
+---
+/**
+ * Texte utilitaire du design system : monospace, capitales.
+ * Sert aux kickers, métadonnées, intitulés de colonnes et en-têtes de cartes.
+ * `size="none"` laisse la taille au parent ou aux classes fournies.
+ */
+type Size = 'xs' | 'sm' | 'none';
+
+interface Props {
+  as?: keyof HTMLElementTagNameMap;
+  size?: Size;
+  /** Couleur atténuée (métadonnées sur fond clair). */
+  muted?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { as: Tag = 'span', size = 'sm', muted = false, class: cls, ...rest } = Astro.props;
+---
+
+<Tag
+  class:list={[
+    'font-mono uppercase',
+    size === 'xs' && 'text-xs',
+    size === 'sm' && 'text-sm',
+    muted && 'text-muted',
+    cls,
+  ]}
+  {...rest}
+>
+  <slot />
+</Tag>

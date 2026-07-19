@@ -3,6 +3,10 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import Heading from '../components/Heading.astro';
+import Highlight from '../components/Highlight.astro';
+import Label from '../components/Label.astro';
+import Button from '../components/Button.astro';
 
 // Projets phares (featured) triés par ordre.
 const all = await getCollection('projects');
@@ -18,35 +22,25 @@ const featured = all
     class="mx-auto flex min-h-[calc(100dvh-4rem)] max-w-6xl flex-col justify-center px-4 py-16"
     aria-labelledby="hero-title"
   >
-    <p class="font-mono text-sm uppercase tracking-widest text-muted">
-      Portfolio - 2026
-    </p>
+    <Label as="p" muted class="tracking-widest">Portfolio - 2026</Label>
 
-    <h1
+    <Heading
+      as="h1"
       id="hero-title"
-      class="mt-4 font-display font-bold uppercase leading-[0.85] tracking-tighter text-[18vw] sm:text-[15vw] lg:text-[12rem]"
+      size="none"
+      class="mt-4 leading-[0.85] tracking-tighter text-[18vw] sm:text-[15vw] lg:text-[12rem]"
     >
       Jami<br />Infante<span class="text-accent">.</span>
-    </h1>
+    </Heading>
 
     <p class="mt-8 max-w-2xl text-xl sm:text-2xl leading-snug">
-      Développeur full-stack, <span class="bg-accent text-accent-ink px-1">4 ans d'expérience</span>.
+      Développeur full-stack, <Highlight>4 ans d'expérience</Highlight>.
       Je conçois et livre des applications web, du back-end à l'interface.
     </p>
 
-    <div class="mt-10 flex flex-wrap gap-4 font-mono text-sm uppercase">
-      <a
-        href="/projets"
-        class="border-2 border-line bg-ink px-6 py-3 text-bg transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
-      >
-        Voir les projets →
-      </a>
-      <a
-        href="/contact"
-        class="border-2 border-line px-6 py-3 transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
-      >
-        Me contacter
-      </a>
+    <div class="mt-10 flex flex-wrap gap-4">
+      <Button href="/projets" variant="solid">Voir les projets →</Button>
+      <Button href="/contact">Me contacter</Button>
     </div>
   </section>
 
