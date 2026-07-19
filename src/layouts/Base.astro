@@ -7,7 +7,7 @@ import { SITE } from '../consts';
 interface Props {
   title?: string;
   description?: string;
-  /** Chemin de l'image OG (dans /public) — sinon image par défaut. */
+  /** Chemin de l'image OG (dans /public) - sinon image par défaut. */
   ogImage?: string;
 }
 
@@ -17,8 +17,8 @@ const {
   ogImage = SITE.ogImage,
 } = Astro.props;
 
-// Titre complet : « Page — Jami Infante » (accueil = titre brut).
-const fullTitle = title ? `${title} — ${SITE.name}` : SITE.title;
+// Titre complet : « Page - Jami Infante » (accueil = titre brut).
+const fullTitle = title ? `${title} - ${SITE.name}` : SITE.title;
 
 // URLs absolues pour l'Open Graph (nécessite `site` dans astro.config).
 const canonical = new URL(Astro.url.pathname, Astro.site);

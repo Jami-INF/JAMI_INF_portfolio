@@ -18,7 +18,7 @@ const projects = (await getCollection('projects')).sort(
     <SectionHeading number="02" title="Projets" as="h1" />
 
     <Label as="p" muted class="mt-6 max-w-2xl">
-      {projects.length} projets — jeux, applications & expérimentations.
+      {projects.length} projets - jeux, applications & expérimentations.
     </Label>
 
     <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -32,6 +32,7 @@ const projects = (await getCollection('projects')).sort(
             image={p.data.image}
             href={`/projets/${p.id}`}
             date={p.data.date}
+            ai={p.data.ai}
           />
         ))
       }

@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 /* ── Polices (self-hosted via @fontsource) ───────────────────────────── */
-/* Space Grotesk — display / titres XXL */
+/* Space Grotesk - display / titres XXL */
 @import "@fontsource/space-grotesk/400.css";
 @import "@fontsource/space-grotesk/500.css";
 @import "@fontsource/space-grotesk/700.css";
-/* Space Mono — métadonnées (dates, tags, numéros) */
+/* Space Mono - métadonnées (dates, tags, numéros) */
 @import "@fontsource/space-mono/400.css";
 @import "@fontsource/space-mono/700.css";
 
@@ -17,7 +17,7 @@
   --color-ink: #14130f;       /* texte quasi-noir, contraste AA sur crème */
   --color-muted: #56534a;     /* gris chaud pour métadonnées (AA sur crème) */
   --color-line: #14130f;      /* bordures pleines */
-  --color-accent: #c3f53c;    /* vert acide — à utiliser avec parcimonie */
+  --color-accent: #c3f53c;    /* vert acide - à utiliser avec parcimonie */
   --color-accent-ink: #14130f;/* texte posé sur l'accent */
 
   /* Typographies */
@@ -102,7 +102,7 @@
      position: relative est indispensable : le <span class="sr-only"> absolu
      placé après la piste se positionnerait sinon par rapport à la page, à
      droite de la piste (~2× la largeur du viewport), hors du overflow:hidden
-     — ce qui créait une barre de scroll horizontale « dans le vide ». */
+     - ce qui créait une barre de scroll horizontale « dans le vide ». */
   .marquee {
     position: relative;
     overflow: hidden;

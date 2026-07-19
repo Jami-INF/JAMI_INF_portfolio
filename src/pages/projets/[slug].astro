@@ -31,9 +31,14 @@ const num = String(data.order).padStart(2, '0');
 
     <!-- En-tête -->
     <header class="mt-8 border-b-2 border-line pb-8">
-      <Label as="div" muted class="flex items-center gap-4">
+      <Label as="div" muted class="flex flex-wrap items-center gap-4">
         <span class="font-bold tabular-nums text-ink">{num}</span>
         {data.date && <span>/ {data.date}</span>}
+        {data.ai && (
+          <span class="border-2 border-line bg-accent px-2 py-0.5 text-xs font-bold text-accent-ink">
+            Conçu avec l'IA
+          </span>
+        )}
       </Label>
 
       <Heading as="h1" size="xl" class="mt-4">{data.title}</Heading>

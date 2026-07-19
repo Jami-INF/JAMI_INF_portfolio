@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Jami Infante — Développeur">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Jami Infante - Développeur">
   <rect width="1200" height="630" fill="#efece1"/>
   <rect x="16" y="16" width="1168" height="598" fill="none" stroke="#14130f" stroke-width="6"/>
   <rect x="16" y="16" width="1168" height="70" fill="#14130f"/>
-  <text x="44" y="64" font-family="'Space Mono',monospace" font-size="30" fill="#efece1">JAMI-INF — PORTFOLIO / 2026</text>
+  <text x="44" y="64" font-family="'Space Mono',monospace" font-size="30" fill="#efece1">JAMI-INF - PORTFOLIO / 2026</text>
   <text x="60" y="320" font-family="'Space Grotesk',sans-serif" font-size="150" font-weight="700" fill="#14130f" letter-spacing="-6">JAMI</text>
   <text x="60" y="470" font-family="'Space Grotesk',sans-serif" font-size="150" font-weight="700" fill="#14130f" letter-spacing="-6">INFANTE<tspan fill="#c3f53c">.</tspan></text>
-  <text x="66" y="560" font-family="'Space Mono',monospace" font-size="34" fill="#56534a">Développeur — projets perso</text>
+  <text x="66" y="560" font-family="'Space Mono',monospace" font-size="34" fill="#56534a">Développeur - projets perso</text>
 </svg>

@@ -1,4 +1,4 @@
-# Portfolio — Jami Infante
+# Portfolio - Jami Infante
 
 Portfolio personnel de Jami Infante (développeur), construit avec **Astro** +
 **Tailwind CSS v4**. Site statique, zéro-JS, direction artistique brutaliste
@@ -6,10 +6,10 @@ moderne. Déployable sur Vercel.
 
 ## Stack
 
-- [Astro](https://astro.build) — génération statique, zéro-JS par défaut
+- [Astro](https://astro.build) - génération statique, zéro-JS par défaut
 - [Tailwind CSS v4](https://tailwindcss.com) via `@tailwindcss/vite`
 - TypeScript strict
-- `@astrojs/sitemap` — sitemap automatique
+- `@astrojs/sitemap` - sitemap automatique
 - `@fontsource/space-grotesk` (display) + `@fontsource/space-mono` (mono)
 
 ## Commandes
@@ -83,9 +83,9 @@ un seul accent vert acide). Les modifier met à jour tout le site.
 
 1. Mets à jour le champ `site` dans [`astro.config.mjs`](astro.config.mjs) avec
    ton domaine (utilisé pour le sitemap et l'Open Graph).
-2. Importe le dépôt sur Vercel — le preset Astro est détecté automatiquement
+2. Importe le dépôt sur Vercel - le preset Astro est détecté automatiquement
    (build : `npm run build`, sortie : `dist/`).
 
 > Astuce SEO : `public/og.svg` est un placeholder. Certains réseaux sociaux ne
-> gèrent pas les SVG en Open Graph — remplace-le par un PNG 1200×630 pour un
+> gèrent pas les SVG en Open Graph - remplace-le par un PNG 1200×630 pour un
 > rendu optimal des partages.

@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 /**
- * Collection « projects » — un fichier markdown par projet dans
+ * Collection « projects » - un fichier markdown par projet dans
  * src/content/projects/*.md. Le schéma zod valide le frontmatter au build.
  */
 const projects = defineCollection({
@@ -21,6 +21,8 @@ const projects = defineCollection({
     // Ordre d'affichage (croissant) et mise en avant sur l'accueil.
     order: z.number().default(99),
     featured: z.boolean().default(false),
+    // Projet conçu en pilotant l'IA (badge « IA » sur la carte et la fiche).
+    ai: z.boolean().default(false),
     // Date optionnelle (affichée en métadonnée monospace).
     date: z.string().optional(),
   }),

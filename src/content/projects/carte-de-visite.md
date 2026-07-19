@@ -1,12 +1,13 @@
 ---
 title: "Générateur de carte de visite"
-description: "Application web pour composer des cartes de visite et les exporter en PDF prêt à imprimer : formats maison et professionnel, QR code intégré, aperçu en direct."
+description: "Application web pour composer des cartes de visite et les exporter en PDF prêt à imprimer : formats maison et professionnel, QR code intégré, aperçu en direct. Développée en pilotant l'IA à partir d'un besoin spécifié."
 stack: ["React", "Vite", "react-pdf", "Tailwind CSS"]
 image: "/projects/carte-visite.png"
 demo: ""
-github: ""
+github: "https://github.com/Jami-INF/Carte-de-visite-generator"
 order: 2
 featured: true
+ai: true
 date: "2026"
 ---
 
@@ -14,10 +15,14 @@ date: "2026"
 
 Application web permettant de composer une carte de visite et de l'exporter en
 **PDF prêt à imprimer**, sans passer par un outil de PAO. L'utilisateur
-renseigne ses informations, choisit un format — **maison** ou
-**professionnel** — et obtient un aperçu fidèle avant export.
+renseigne ses informations, choisit un format - **maison** ou
+**professionnel** - et obtient un aperçu fidèle avant export.
 
-> Descriptif provisoire — à compléter (contexte, captures, lien de démo).
+Comme pour Bailiz, ce projet est né d'un **besoin concret à couvrir vite** :
+plutôt que de partir d'une page blanche, j'ai **spécifié précisément le
+résultat attendu** (formats d'impression, gabarits, QR code, fidélité
+aperçu/PDF) et **piloté l'IA** (Claude) pour l'implémentation, en validant
+chaque étape.
 
 ## Points clés
 
@@ -31,4 +36,5 @@ renseigne ses informations, choisit un format — **maison** ou
 
 La génération de documents PDF dans le navigateur : contraintes de mise en
 page print (formats, marges, polices) et fidélité entre l'aperçu écran et le
-fichier final.
+fichier final - et la valeur d'une spécification claire quand on développe
+avec l'IA.
