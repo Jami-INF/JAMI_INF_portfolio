@@ -7,6 +7,7 @@ export const SITE = {
   email: 'jamiinfante@gmail.com',
   github: 'https://github.com/jami-inf',
   linkedin: 'https://www.linkedin.com/in/jami-infante',
+  location: 'Région de Clermont-Ferrand — Télétravail possible',
   ogImage: '/og.svg',
 } as const;
 

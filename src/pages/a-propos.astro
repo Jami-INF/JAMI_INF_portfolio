@@ -8,6 +8,7 @@ import Label from '../components/Label.astro';
 import Heading from '../components/Heading.astro';
 import Tag from '../components/Tag.astro';
 import { experiences, skills, formation, passions } from '../data/about';
+import { SITE } from '../consts';
 ---
 
 <Base
@@ -20,8 +21,8 @@ import { experiences, skills, formation, passions } from '../data/about';
     <!-- Intro — ton confirmé, pas "j'apprends" -->
     <div class="mt-10">
       <p class="text-2xl sm:text-3xl leading-tight font-display">
-        Je suis <Highlight>Jami Infante</Highlight>, développeur avec
-        <Highlight>4 ans d'expérience</Highlight>. Je conçois et livre des
+        Je suis <Highlight>Jami Infante</Highlight>, développeur
+        avec <Highlight>4 ans d'expérience</Highlight>. Je conçois et livre des
         applications web, du back-end à l'interface.
       </p>
     </div>
@@ -39,6 +40,13 @@ import { experiences, skills, formation, passions } from '../data/about';
       curiosité m'a permis de découvrir les différents langages de programmation
       de manière autodidacte, avant même de m'orienter vers cette voie.
     </p>
+
+    <p class="mt-4 max-w-2xl leading-relaxed text-ink/80">
+      Ce que j'aime : résoudre des problèmes, automatiser ce qui peut l'être —
+      tests, déploiements, documentation — et livrer des applications fiables.
+    </p>
+
+    <Label as="p" muted class="mt-6 tracking-wide">{SITE.location}</Label>
 
     <!-- ── Expérience professionnelle (mise en avant) ─────────────── -->
     <div class="mt-16">

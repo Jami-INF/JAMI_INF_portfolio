@@ -1,7 +1,7 @@
 ---
 title: "MecaSystems"
 description: "Marketplace de pièces automobiles pour les professionnels de la réparation : interfaçage DMS (REST / SOAP), e-commerce, data et infrastructure. Mon quotidien de développeur full-stack."
-stack: ["React", "WinDev / WebDev", "HFSQL", "REST", "SOAP", "Python", "Docker", "Linux"]
+stack: ["React", "WinDev / WebDev", "HFSQL", "REST", "SOAP", "GitLab CI/CD", "Python", "Docker", "Linux"]
 image: "/projects/mecasystems.png"
 demo: "https://mecasystems.flauraud.fr/"
 github: ""
@@ -23,7 +23,11 @@ full-stack**, du back-end jusqu'au support.
 - **Interfaçage DMS** — Développement des web services **REST** et maintenance
   des web services **SOAP** qui connectent MecaSystems aux logiciels de gestion
   des ateliers (comptabilité, commandes, devis…), afin de supprimer les
-  re-saisies entre systèmes.
+  re-saisies entre systèmes. Refonte et documentation des endpoints
+  (**Swagger / OpenAPI**).
+- **CI/CD** — Mise en place de pipelines **GitLab** avec runners sur
+  environnements Linux / Docker : déploiement continu et génération automatique
+  de la documentation d'API.
 - **Développement full-stack** — Interfaces web pour l'application métier et
   l'e-commerce (React, WebDev), logique métier, API REST, échanges JSON et
   automatisation de flux. Plateforme déployée en marque blanche pour plusieurs

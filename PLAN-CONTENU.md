@@ -33,14 +33,15 @@ Cette curiosité envers l'informatique m'a permis de découvrir avant même de m
 
 Je travaille sur **MecaSystems**, la marketplace de pièces automobiles du groupe (plusieurs milliers d'utilisateurs pros, 85 000+ références), du back-end jusqu'au support. La plateforme est désormais déployée pour plusieurs fournisseurs (Barrault, etc.). Rôle **polyvalent** couvrant toute la chaîne :
 
-- **Interfaçage DMS** — Développement des web services **REST** (nouveautés) et maintenance des web services **SOAP** connectant MecaSystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…), pour éliminer les re-saisies entre systèmes.
+- **Interfaçage DMS** — Développement des web services **REST** (nouveautés) et maintenance des web services **SOAP** connectant MecaSystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…), pour éliminer les re-saisies entre systèmes. Refonte et documentation des endpoints (**Swagger / OpenAPI**).
 - **Développement full-stack** — Interfaces web (React, WebDev) pour l'appli métier et l'e-commerce ; logique métier, API REST, échanges JSON et automatisation de flux.
+- **CI/CD** — Mise en place de pipelines **GitLab** avec runners sur environnements Linux / Docker : déploiement continu et génération automatique de la documentation d'API.
 - **Data & bases de données** — Intégration des fichiers de stock, conception et évolution de bases **HFSQL / SQL**, optimisation de requêtes, fiabilité et cohérence des données.
-- **Déploiement & exploitation** — Livraisons sur environnements Linux et Docker, mises en production, administration serveur et réseau (SSH, FTP), mise en place d'un NAS média centralisant l'ensemble des images du site.
+- **Déploiement & exploitation** — Livraisons sur environnements Linux et Docker, mises en production, administration serveur et réseau (SSH, FTP / SFTP), scripts d'automatisation PowerShell, mise en place d'un NAS média centralisant l'ensemble des images du site.
 - **Performance & infrastructure** — Développement d'un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable pour être lancé en parallèle depuis plusieurs postes/serveurs, afin de simuler commandes et navigation, d'analyser le comportement des serveurs, du WAF et du load balancer, puis d'ajuster l'infrastructure en conséquence (RAM, stratégie de load balancing round-robin / sticky cookie…).
 - **Qualité & support** — Tests et non-régression, maintenance corrective/évolutive, diagnostic d'incidents et support utilisateurs.
 
-**Stack :** React · WinDev / WebDev · HFSQL · SOAP · REST · Docker · Linux
+**Stack :** React · WinDev / WebDev · HFSQL · SOAP · REST · GitLab CI/CD · Docker · Linux
 
 #### 2023 – 2024 — Développeur Web · FLAURAUD – AURILIS GROUP
 
@@ -77,13 +78,13 @@ Développement d'un outil interne de gestion de licence client : analyse de l'ex
 Le développement d'interfaces est mon terrain de prédilection : je construis des applications avec **React**, **TypeScript** et **JavaScript**, HTML, CSS et Tailwind. J'ai également travaillé avec Vue.js.
 
 **Back-end & API**
-Développement de la logique métier et des services d'échange entre applications : **API REST** et **SOAP**, Node.js / Express, PHP (dont Symfony et le modèle MVC). Côté données : MySQL, PostgreSQL, MongoDB et HFSQL.
+Développement de la logique métier et des services d'échange entre applications : **API REST** et **SOAP** (documentation Swagger / OpenAPI), Node.js / Express, PHP (dont Symfony et le modèle MVC). Côté données : MySQL, PostgreSQL, MongoDB et HFSQL.
 
 **Langages**
-Au quotidien : JavaScript / TypeScript, PHP et Python. Bases solides en Java, C et C#, issues de ma formation et de mes projets.
+Au quotidien : JavaScript / TypeScript, PHP et Python (+ PowerShell pour l'automatisation). Bases solides en Java, C et C#, issues de ma formation et de mes projets.
 
 **DevOps & outils**
-Docker, Git / GitHub, environnements Linux, VS Code, Postman.
+Docker, GitLab CI/CD, Git / GitHub, environnements Linux, VS Code, Postman, Bruno.
 
 ### Diplômes & formation
 
@@ -112,6 +113,12 @@ La réparation d'appareils électroniques m'intéresse depuis mon enfance où mo
 
 **Sport en salle**
 Je pratique la musculation depuis 1 an et demi. J'ai décidé de commencer au début de mon stage de deuxième année et depuis, j'y vais trois fois par semaine.
+
+**Domotique, embarqué & matériel**
+Entre domotique, systèmes embarqués et administration de mes serveurs personnels, je bidouille autant le logiciel que le matériel — jusqu'à la modification d'appareils audio ou de consoles rétro.
+
+**Data & finance immobilière**
+Je m'intéresse à l'investissement et à la fiscalité immobilière, et j'aime relier le code à cette logique métier : c'est de là qu'est né Bailiz, mon outil de gestion locative.
 
 ---
 
@@ -170,6 +177,7 @@ Dans le cadre d'un projet tutoré, j'ai travaillé sur un modèle d'IA capable d
 
 ## 4. Contact `/contact`
 
+- **Localisation :** Région de Clermont-Ferrand — Télétravail possible
 - **Email :** `jamiinfante@gmail.com`
 - **GitHub** `https://github.com/Jami-INF`
 - **LinkedIn** `https://www.linkedin.com/in/jami-infante/`

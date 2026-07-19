@@ -40,13 +40,14 @@ export const experiences: Experience[] = [
     logo: '/experiences/EFF-logo.png',
     logoDark: false,
     highlights: [
-      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant MecaSystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…), pour éliminer les re-saisies entre systèmes.',
+      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant MecaSystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…), pour éliminer les re-saisies entre systèmes. Refonte et documentation des endpoints (Swagger / OpenAPI).',
       'Développement full-stack : interfaces web (React, WebDev) pour l’appli métier et l’e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs.',
+      'CI/CD : mise en place de pipelines GitLab avec runners sur environnements Linux / Docker — déploiement continu et génération automatique de la documentation d’API.',
       'Data & bases de données : intégration des fichiers de stock, conception et évolution de bases HFSQL / SQL, optimisation de requêtes.',
       'Performance & infrastructure : développement d’un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable et lancé depuis plusieurs postes, pour analyser le comportement des serveurs, du WAF et du load balancer, puis ajuster l’infrastructure.',
-      'Déploiement & exploitation : livraisons sur environnements Linux et Docker, mises en production, administration serveur (SSH, FTP), mise en place d’un NAS média pour les images du site.',
+      'Déploiement & exploitation : livraisons sur environnements Linux et Docker, mises en production, administration serveur (SSH, FTP / SFTP), scripts d’automatisation PowerShell, mise en place d’un NAS média pour les images du site.',
     ],
-    stack: ['React', 'WinDev / WebDev', 'HFSQL', 'REST', 'SOAP', 'Python', 'Docker', 'Linux'],
+    stack: ['React', 'WinDev / WebDev', 'HFSQL', 'REST', 'SOAP', 'GitLab CI/CD', 'Python', 'Docker', 'Linux'],
   },
   {
     period: '2023 — 2024',
@@ -102,9 +103,9 @@ export const experiences: Experience[] = [
 // Compétences groupées — front-end en premier (orientation React / TypeScript).
 export const skills: Record<string, string[]> = {
   'Front-end': ['React', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Tailwind CSS', 'Vue.js'],
-  'Back-end & API': ['API REST', 'SOAP', 'Node.js / Express', 'PHP', 'Symfony', 'MySQL', 'PostgreSQL', 'MongoDB', 'HFSQL'],
-  Langages: ['JavaScript / TypeScript', 'PHP', 'Python', 'Java', 'C', 'C#'],
-  'DevOps & outils': ['Docker', 'Git / GitHub', 'Linux', 'VS Code', 'Postman'],
+  'Back-end & API': ['API REST', 'SOAP', 'Swagger / OpenAPI', 'Node.js / Express', 'PHP', 'Symfony', 'MySQL', 'PostgreSQL', 'MongoDB', 'HFSQL'],
+  Langages: ['JavaScript / TypeScript', 'PHP', 'Python', 'PowerShell', 'Java', 'C', 'C#'],
+  'DevOps & outils': ['Docker', 'GitLab CI/CD', 'Git / GitHub', 'Linux', 'VS Code', 'Postman', 'Bruno'],
 };
 
 // Formation, du plus récent au plus ancien.
@@ -147,5 +148,13 @@ export const passions: Passion[] = [
     title: 'Sport en salle',
     image: '/passions/basic.jpg',
     text: 'Je pratique la musculation depuis un an et demi, à raison de trois séances par semaine.',
+  },
+  {
+    title: 'Domotique, embarqué & matériel',
+    text: 'Entre domotique, systèmes embarqués et administration de mes serveurs personnels, je bidouille autant le logiciel que le matériel — jusqu’à la modification d’appareils audio ou de consoles rétro.',
+  },
+  {
+    title: 'Data & finance immobilière',
+    text: 'Je m’intéresse à l’investissement et à la fiscalité immobilière, et j’aime relier le code à cette logique métier : c’est de là qu’est né Bailiz, mon outil de gestion locative.',
   },
 ];
