@@ -16,9 +16,8 @@ import { SITE } from '../consts';
   description="Parcours, expérience professionnelle et compétences de Jami Infante, développeur (4 ans d'expérience)."
 >
   <section class="mx-auto max-w-4xl px-4 py-16">
-    <SectionHeading number="03" title="À propos" as="h1" />
+    <SectionHeading number="02" title="À propos" as="h1" />
 
-    <!-- Intro - ton confirmé, pas "j'apprends" -->
     <div class="mt-10">
       <p class="text-2xl sm:text-3xl leading-tight font-display">
         Je suis <Highlight>Jami Infante</Highlight>, développeur
@@ -50,15 +49,15 @@ import { SITE } from '../consts';
 
     <!-- ── Expérience professionnelle (mise en avant) ─────────────── -->
     <div class="mt-16">
-      <SectionHeading number="03.1" title="Expérience" as="h2" />
+      <SectionHeading number="02.1" title="Expérience" as="h2" />
       <ol class="mt-8 space-y-6">
         {experiences.map((exp) => <ExperienceCard experience={exp} />)}
       </ol>
     </div>
 
-    <!-- ── Compétences ────────────────────────────────────────────── -->
+    <!-- Compétences -->
     <div class="mt-16">
-      <SectionHeading number="03.2" title="Compétences" as="h2" />
+      <SectionHeading number="02.2" title="Compétences" as="h2" />
       <div class="mt-8 grid gap-6 sm:grid-cols-2">
         {
           Object.entries(skills).map(([group, items]) => (
@@ -79,9 +78,9 @@ import { SITE } from '../consts';
       </div>
     </div>
 
-    <!-- ── Formation (compact) ────────────────────────────────────── -->
+    <!-- Formation -->
     <div class="mt-16">
-      <SectionHeading number="03.3" title="Formation" as="h2" />
+      <SectionHeading number="02.3" title="Formation" as="h2" />
       <ol class="mt-8 divide-y-2 divide-line border-2 border-line">
         {
           formation.map((item) => (
@@ -99,9 +98,9 @@ import { SITE } from '../consts';
       </ol>
     </div>
 
-    <!-- ── Passions ───────────────────────────────────────────────── -->
+    <!-- Passions -->
     <div class="mt-16">
-      <SectionHeading number="03.4" title="Passions" as="h2" />
+      <SectionHeading number="02.4" title="Passions" as="h2" />
       <div class="mt-8 grid gap-6 sm:grid-cols-2">
         {passions.map((p) => <PassionCard passion={p} />)}
       </div>

@@ -1,6 +1,6 @@
 ---
 title: "Démineur"
-description: "Le jeu classique du démineur, reproduit de zéro : grille générée aléatoirement, révélation en cascade et détection de fin de partie."
+description: "Le jeu classique du démineur recodé de zéro en JavaScript pur, sans framework ni bibliothèque : un exercice d'algorithmique jouable directement en ligne."
 stack: ["JavaScript", "HTML", "CSS"]
 image: "/projects/demineur.svg"
 demo: "https://jami-inf.github.io/demineur_JS/"
@@ -10,21 +10,31 @@ featured: false
 date: "2023"
 ---
 
-## À propos du Démineur
+## À propos du projet
 
-Il s'agit d'un démineur développé en JavaScript. Il est possible de choisir le niveau de difficulté qui influe sur le nombre de mines et la taille de la grille. Le jeu est dévellopé en JavaScript basique et fonctionne parfaitement, l'occasion de travailler la
-logique de grille, la génération aléatoire des mines et l'algorithme de
-révélation en cascade.
+Le démineur classique, recodé de zéro en **JavaScript pur** - sans framework
+ni bibliothèque. L'objectif de cet exercice : implémenter proprement toute la
+logique du jeu, de la génération de la grille à la détection de fin de partie.
 
-> Le front n'est pas travaillé, il s'agissait de l'algorithme
+Le cœur du projet est l'**algorithme de révélation en cascade** : cliquer sur
+une case vide révèle récursivement toutes les cases voisines jusqu'aux
+frontières chiffrées, comme dans le jeu original.
 
-### Fonctionnalités
+## Fonctionnalités
 
-- Génération aléatoire des mines sur une grille paramétrable.
-- Révélation en cascade des cases vides.
-- Pose de drapeaux et détection de victoire / défaite.
+- **Trois niveaux de difficulté** qui font varier la taille de la grille et le
+  nombre de mines.
+- **Placement aléatoire des mines** et calcul des indices de chaque case
+  (nombre de mines voisines).
+- **Révélation en cascade** des cases vides par parcours récursif.
+- **Pose de drapeaux** et détection automatique de la victoire ou de la
+  défaite.
 
-### Ce que j'ai appris
+> Jouable directement dans le navigateur - voir la démo en ligne.
 
-Algorithmique de grille (parcours récursif), gestion d'événements et logique
-de jeu bien encapsulée.
+## Ce que j'ai appris
+
+Manipuler une grille en deux dimensions (voisinage, parcours récursif,
+conditions d'arrêt), gérer les événements du DOM sans framework et structurer
+la logique d'un jeu en fonctions bien découpées. Un bon rappel que JavaScript
+seul suffit largement pour ce genre de mécanique.
