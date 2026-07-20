@@ -14,7 +14,6 @@ const isActive = (href: string) => {
     aria-label="Navigation principale"
     class="mx-auto flex max-w-6xl items-stretch justify-between"
   >
-    <!-- Logo -->
     <a
       href="/"
       class="flex items-center gap-2 border-r-2 border-line px-4 py-4 font-display text-lg font-bold uppercase tracking-tight transition-colors duration-150 hover:bg-accent hover:text-accent-ink"
@@ -23,7 +22,6 @@ const isActive = (href: string) => {
       <span>{SITE.name}</span>
     </a>
 
-    <!-- Liens -->
     <ul class="flex items-stretch">
       {
         NAV.filter((item) => item.href !== '/').map((item) => (

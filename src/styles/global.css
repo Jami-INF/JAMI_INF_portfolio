@@ -21,11 +21,8 @@
   --color-accent-ink: #14130f;/* texte posé sur l'accent */
 
   /* Typographies */
-  --font-display: "Space Grotesk", "Archivo", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
-
-  /* Largeur d'épaisseur de bordure brutaliste */
-  --border-brutal: 2px;
 }
 
 /* ── Réinitialisations & base ─────────────────────────────────────────── */

@@ -10,7 +10,7 @@ interface Props {
   description: string;
   stack: string[];
   image: string;
-  href: string; // page détail
+  href: string;
   date?: string;
   /** Projet conçu en pilotant l'IA — affiche un badge sur la carte. */
   ai?: boolean;
@@ -21,7 +21,6 @@ const { number, title, description, stack, image, href, date, ai = false } = Ast
 <article
   class="group relative flex flex-col border-2 border-line bg-bg transition-transform duration-150 hover:-translate-x-1 hover:-translate-y-1 focus-within:-translate-x-1 focus-within:-translate-y-1"
 >
-  <!-- En-tête : numéro + badge IA + date -->
   <Label as="div" size="xs" class="flex items-center justify-between border-b-2 border-line px-4 py-2">
     <span class="font-bold tabular-nums">{number}</span>
     <span class="flex items-center gap-2">
@@ -34,12 +33,10 @@ const { number, title, description, stack, image, href, date, ai = false } = Ast
     </span>
   </Label>
 
-  <!-- Visuel -->
   <a href={href} class="block border-b-2 border-line" tabindex="-1" aria-hidden="true">
     <FramedImage src={image} frame="none" />
   </a>
 
-  <!-- Corps -->
   <div class="flex flex-1 flex-col gap-4 p-4">
     <Heading as="h3" size="md">
       <a href={href} class="after:absolute after:inset-0 focus:outline-none">

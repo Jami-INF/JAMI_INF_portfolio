@@ -24,12 +24,10 @@ const num = String(data.order).padStart(2, '0');
 
 <Base title={data.title} description={data.description} ogImage={data.image}>
   <article class="mx-auto max-w-4xl px-4 py-16">
-    <!-- Fil d'ariane -->
     <Label as="a" href="/projets" size="xs" class="link-brutal">
       ← Retour aux projets
     </Label>
 
-    <!-- En-tête -->
     <header class="mt-8 border-b-2 border-line pb-8">
       <Label as="div" muted class="flex flex-wrap items-center gap-4">
         <span class="font-bold tabular-nums text-ink">{num}</span>
@@ -47,12 +45,10 @@ const num = String(data.order).padStart(2, '0');
         {data.description}
       </p>
 
-      <!-- Stack -->
       <ul class="mt-6 flex flex-wrap gap-2">
         {data.stack.map((s) => <li><Tag label={s} /></li>)}
       </ul>
 
-      <!-- Liens -->
       {
         (data.demo || data.github) && (
           <div class="mt-8 flex flex-wrap gap-4">
@@ -71,7 +67,6 @@ const num = String(data.order).padStart(2, '0');
       }
     </header>
 
-    <!-- Visuel -->
     <FramedImage
       src={data.image}
       alt={`Aperçu du projet ${data.title}`}
@@ -79,10 +74,7 @@ const num = String(data.order).padStart(2, '0');
       class="mt-8"
     />
 
-    <!-- Contenu markdown -->
-    <div
-      class="prose-brutal mt-12 max-w-none"
-    >
+    <div class="prose-brutal mt-12 max-w-none">
       <Content />
     </div>
   </article>

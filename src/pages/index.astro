@@ -13,7 +13,6 @@ import { SITE } from '../consts';
 // Stack mise en avant dans le hero - volontairement courte.
 const heroStack = ['React', 'TypeScript', 'API REST', 'Docker', 'GitLab CI/CD', 'Linux'];
 
-// Projets phares (featured) triés par ordre.
 const all = await getCollection('projects');
 const featured = all
   .filter((p) => p.data.featured)
@@ -22,7 +21,6 @@ const featured = all
 ---
 
 <Base>
-  <!-- ── HERO plein écran ─────────────────────────────────────────── -->
   <section
     class="mx-auto flex min-h-[calc(100dvh-4rem)] max-w-6xl flex-col justify-center px-4 py-16"
     aria-labelledby="hero-title"
@@ -65,7 +63,6 @@ const featured = all
     </Label>
   </section>
 
-  <!-- ── Projets phares ───────────────────────────────────────────── -->
   <section class="mx-auto max-w-6xl px-4 py-8" aria-label="Projets phares">
     <SectionHeading number="01" title="Projets phares" as="h2" />
 
