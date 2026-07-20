@@ -2,7 +2,7 @@
 title: "Démineur"
 description: "Le jeu classique du démineur recodé de zéro en JavaScript pur, sans framework ni bibliothèque : un exercice d'algorithmique jouable directement en ligne."
 stack: ["JavaScript", "HTML", "CSS"]
-image: "/projects/demineur.svg"
+image: "/projects/demineur.jpg"
 demo: "https://jami-inf.github.io/demineur_JS/"
 github: "https://github.com/Jami-INF/demineur_JS"
 order: 8

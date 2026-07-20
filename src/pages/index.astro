@@ -7,6 +7,11 @@ import Heading from '../components/Heading.astro';
 import Highlight from '../components/Highlight.astro';
 import Label from '../components/Label.astro';
 import Button from '../components/Button.astro';
+import Tag from '../components/Tag.astro';
+import { SITE } from '../consts';
+
+// Stack mise en avant dans le hero - volontairement courte.
+const heroStack = ['React', 'TypeScript', 'API REST', 'Docker', 'GitLab CI/CD', 'Linux'];
 
 // Projets phares (featured) triés par ordre.
 const all = await getCollection('projects');
@@ -38,10 +43,26 @@ const featured = all
       Je conçois et livre des applications web, du back-end à l'interface.
     </p>
 
+    <p class="mt-4 max-w-2xl leading-relaxed text-ink/80">
+      Actuellement chez Emil Frey France, sur une marketplace B2B de pièces
+      automobiles : Design, Maintenance WEB/API, DATA, e-commerce et CI/CD.&nbsp;<a
+        href="/a-propos"
+        class="link-brutal whitespace-nowrap">Mon parcours →</a>
+    </p>
+
+    <ul class="mt-6 flex max-w-2xl flex-wrap gap-2" aria-label="Stack principale">
+      {heroStack.map((s) => <li><Tag label={s} /></li>)}
+    </ul>
+
     <div class="mt-10 flex flex-wrap gap-4">
       <Button href="/projets" variant="solid">Voir les projets →</Button>
       <Button href="/contact">Me contacter</Button>
     </div>
+
+    <Label as="p" muted size="xs" class="mt-10 flex items-center gap-2 tracking-wide">
+      <span class="h-2 w-2 shrink-0 bg-accent" aria-hidden="true"></span>
+      Ouvert aux opportunités - {SITE.location}
+    </Label>
   </section>
 
   <!-- ── Projets phares ───────────────────────────────────────────── -->

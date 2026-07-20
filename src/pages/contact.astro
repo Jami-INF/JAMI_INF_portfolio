@@ -21,15 +21,19 @@ const links = [
     <SectionHeading number="04" title="Contact" as="h1" />
 
     <Heading as="p" size="lg" class="mt-10">
-      Un projet, une idée<span class="text-accent">,</span><br />ou juste dire bonjour<span class="text-accent">?</span>
+      Une opportunité, une question technique<span class="text-accent">,</span><br />ou un retour sur un projet<span class="text-accent">?</span>
     </Heading>
 
     <p class="mt-8 max-w-2xl leading-relaxed text-ink/80">
-      Le plus simple reste l'email. Je réponds dès que possible. Vous me trouverez
-      aussi sur GitHub et LinkedIn.
+      Actuellement en poste, j'étudie les opportunités - CDI, région de
+      Clermont-Ferrand ou télétravail. Le plus simple reste l'email : je réponds
+      sous 48 h. Pour voir du code, GitHub&nbsp;; pour le parcours, LinkedIn.
     </p>
 
-    <Label as="p" muted class="mt-4 tracking-wide">{SITE.location}</Label>
+    <Label as="p" muted size="xs" class="mt-6 flex items-center gap-2 tracking-wide">
+      <span class="h-2 w-2 shrink-0 bg-accent" aria-hidden="true"></span>
+      Ouvert aux opportunités - {SITE.location}
+    </Label>
 
     <!-- Coordonnées -->
     <ul class="mt-12 divide-y-2 divide-line border-2 border-line font-mono">
@@ -54,11 +58,16 @@ const links = [
       }
     </ul>
 
-    <!-- CTA email direct -->
-    <div class="mt-12">
+    <!-- CTA : email + CV -->
+    <div class="mt-12 flex flex-wrap gap-4">
       <Button href={`mailto:${SITE.email}`} variant="solid" size="lg">
         M'écrire un email →
       </Button>
+      {/* À activer une fois le PDF déposé dans public/cv-jami-infante.pdf :
+      <Button href="/cv-jami-infante.pdf" size="lg" external>
+        Télécharger mon CV
+      </Button>
+      */}
     </div>
   </section>
 </Base>
