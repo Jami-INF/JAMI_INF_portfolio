@@ -2,7 +2,7 @@
 title: "Portfolio 2026"
 description: "Ce site : portfolio statique néo-brutaliste construit avec Astro et Tailwind CSS 4 - design system de composants, contenu en Markdown validé au build, SEO et accessibilité soignés."
 stack: ["Astro", "Tailwind CSS 4", "TypeScript", "Content Collections", "GitHub Actions"]
-image: "/projects/placeholder.svg"
+image: "/projects/portfolio-2026.png"
 demo: ""
 github: ""
 order: 9
