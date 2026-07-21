@@ -1,7 +1,7 @@
 ---
 title: "Portfolio 2026"
 description: "Ce site : portfolio statique néo-brutaliste construit avec Astro et Tailwind CSS 4 - design system de composants, contenu en Markdown validé au build, SEO et accessibilité soignés."
-stack: ["Astro", "Tailwind CSS 4", "TypeScript", "Content Collections", "Vercel"]
+stack: ["Astro", "Tailwind CSS 4", "TypeScript", "Content Collections", "GitHub Actions"]
 image: "/projects/placeholder.svg"
 demo: ""
 github: ""
@@ -36,7 +36,8 @@ crème / encre / vert acide, typographies Space Grotesk et Space Mono, cadres
   marqué, respect de `prefers-reduced-motion`, contrastes AA.
 - **Performance** - Quasi aucun JavaScript envoyé au navigateur, polices
   auto-hébergées, images lazy avec dimensions réservées (pas de layout shift).
-- **Déploiement continu** sur Vercel à chaque push.
+- **Déploiement continu** - pipeline GitHub Actions : build et mise en ligne
+  sur GitHub Pages à chaque push, domaine `jami-infante.fr` chez OVH.
 
 ## Ce que j'ai appris
 

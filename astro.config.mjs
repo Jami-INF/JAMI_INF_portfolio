@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   // Sert au sitemap et aux balises Open Graph (URLs absolues).
-  site: 'https://jami-inf.vercel.app',
+  site: 'https://jami-infante.fr',
   vite: {
     plugins: [tailwindcss()],
   },
