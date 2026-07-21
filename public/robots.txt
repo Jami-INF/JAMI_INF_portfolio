@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jami-infante.fr/sitemap-index.xml

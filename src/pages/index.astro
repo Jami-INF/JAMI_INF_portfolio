@@ -13,6 +13,19 @@ import { SITE } from '../consts';
 // Stack mise en avant dans le hero - volontairement courte.
 const heroStack = ['React', 'TypeScript', 'API REST', 'Docker', 'GitLab CI/CD', 'Linux'];
 
+// Données structurées schema.org (résultats enrichis Google).
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: SITE.name,
+  url: Astro.site?.href,
+  jobTitle: 'Développeur full-stack',
+  worksFor: { '@type': 'Organization', name: 'Emil Frey France' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Clermont-Ferrand', addressCountry: 'FR' },
+  email: `mailto:${SITE.email}`,
+  sameAs: [SITE.github, SITE.linkedin],
+};
+
 const all = await getCollection('projects');
 const featured = all
   .filter((p) => p.data.featured)
@@ -21,6 +34,8 @@ const featured = all
 ---
 
 <Base>
+  <script type="application/ld+json" set:html={JSON.stringify(person)} is:inline />
+
   <section
     class="mx-auto flex min-h-[calc(100dvh-4rem)] max-w-6xl flex-col justify-center px-4 py-16"
     aria-labelledby="hero-title"
