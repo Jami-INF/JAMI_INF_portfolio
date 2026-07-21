@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ── Polices (self-hosted via @fontsource) ───────────────────────────── */
+/* Polices @fontsource) */
 /* Space Grotesk - display / titres XXL */
 @import "@fontsource/space-grotesk/400.css";
 @import "@fontsource/space-grotesk/500.css";
@@ -9,7 +9,6 @@
 @import "@fontsource/space-mono/400.css";
 @import "@fontsource/space-mono/700.css";
 
-/* ── Tokens de design (Tailwind v4 @theme) ───────────────────────────── */
 /* Ces variables génèrent des utilitaires : bg-bg, text-ink, font-display… */
 @theme {
   /* Palette réduite : crème / noir / un seul accent vif */
@@ -17,7 +16,7 @@
   --color-ink: #14130f;       /* texte quasi-noir, contraste AA sur crème */
   --color-muted: #56534a;     /* gris chaud pour métadonnées (AA sur crème) */
   --color-line: #14130f;      /* bordures pleines */
-  --color-accent: #c3f53c;    /* vert acide - à utiliser avec parcimonie */
+  --color-accent: #c3f53c;    /* vert acide */
   --color-accent-ink: #14130f;/* texte posé sur l'accent */
 
   /* Typographies */
@@ -25,7 +24,6 @@
   --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
 }
 
-/* ── Réinitialisations & base ─────────────────────────────────────────── */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -64,7 +62,7 @@
   }
 }
 
-/* ── Respect de prefers-reduced-motion ───────────────────────────────── */
+/* Respect de prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -78,7 +76,7 @@
   }
 }
 
-/* ── Utilitaires composants (couche components) ──────────────────────── */
+/* Utilitaires composants (couche components) */
 @layer components {
   /* Lien brutaliste : soulignement épais qui s'épaissit au hover */
   .link-brutal {
@@ -115,7 +113,7 @@
     to   { transform: translateX(-100%); }
   }
 
-  /* ── Contenu markdown (fiches projets) ─────────────────────────────
+  /*  Contenu markdown (fiches projets) 
      Mise en forme minimale, sans plugin typography. */
   .prose-brutal :where(h2) {
     font-family: var(--font-display);

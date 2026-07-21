@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Label from '../components/Label.astro';
+import Button from '../components/Button.astro';
+import { photos } from '../data/galerie';
+---
+
+<Base
+  title="Galerie"
+  description="Ma galerie photo"
+>
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <SectionHeading number="05" title="Galerie" as="h1" />
+
+    <Label as="p" muted class="mt-6 max-w-2xl">
+      Ma galerie photo, {photos.length} clichés.
+    </Label>
+
+    {
+      photos.length === 0 ? (
+        <p class="mt-10 border-2 border-line p-6 font-mono text-sm text-muted">
+          Galerie en préparation - photos à venir.
+        </p>
+      ) : (
+        <div class="mt-10 gap-6 [column-fill:_balance] columns-1 sm:columns-2 lg:columns-3">
+          {photos.map((photo) => (
+            <figure class="mb-6 break-inside-avoid border-2 border-line">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                loading="lazy"
+                decoding="async"
+                class="block w-full"
+              />
+              {photo.caption && (
+                <figcaption class="border-t-2 border-line p-3 font-mono text-xs text-muted">
+                  {photo.caption}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      )
+    }
+
+    <div class="mt-12 border-t-2 border-line pt-6">
+      <Button href="/a-propos">← Retour aux passions</Button>
+    </div>
+  </section>
+</Base>

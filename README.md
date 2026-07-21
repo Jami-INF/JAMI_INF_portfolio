@@ -1,8 +1,8 @@
 # Portfolio - Jami Infante
 
-Portfolio personnel de Jami Infante (développeur), construit avec **Astro** +
+Portfolio personnel de Jami Infante, construit avec **Astro** +
 **Tailwind CSS v4**. Site statique, zéro-JS, direction artistique brutaliste
-moderne. Déployable sur Vercel.
+moderne.
 
 ## Stack
 
@@ -26,10 +26,6 @@ moderne. Déployable sur Vercel.
 Chaque projet est un fichier Markdown dans `src/content/projects/`.
 Le nom du fichier (`mon-projet.md`) devient l'URL (`/projets/mon-projet`).
 
-1. Crée `src/content/projects/mon-projet.md`.
-2. Renseigne le frontmatter (schéma validé par Zod dans
-   [`src/content.config.ts`](src/content.config.ts)) :
-
 ```markdown
 ---
 title: "Mon Projet"
@@ -47,9 +43,6 @@ date: "2025"                            # optionnel
 
 Le corps Markdown est rendu sur la page détail du projet.
 ```
-
-3. (Optionnel) Ajoute un visuel dans `public/projects/`. Les placeholders
-   fournis sont des SVG au format 1200×675 (ratio 16:9).
 
 ## Structure
 
@@ -72,20 +65,3 @@ src/
   consts.ts                            # métadonnées site, nav, liens sociaux
   content.config.ts                    # schéma Zod de la collection
 ```
-
-## Design tokens
-
-Couleurs et polices sont centralisées dans le bloc `@theme` de
-[`src/styles/global.css`](src/styles/global.css) (fond crème, encre quasi-noire,
-un seul accent vert acide). Les modifier met à jour tout le site.
-
-## Déploiement (Vercel)
-
-1. Mets à jour le champ `site` dans [`astro.config.mjs`](astro.config.mjs) avec
-   ton domaine (utilisé pour le sitemap et l'Open Graph).
-2. Importe le dépôt sur Vercel - le preset Astro est détecté automatiquement
-   (build : `npm run build`, sortie : `dist/`).
-
-> Astuce SEO : `public/og.svg` est un placeholder. Certains réseaux sociaux ne
-> gèrent pas les SVG en Open Graph - remplace-le par un PNG 1200×630 pour un
-> rendu optimal des partages.

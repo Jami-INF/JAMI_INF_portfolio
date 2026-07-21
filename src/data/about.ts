@@ -28,6 +28,8 @@ export interface Passion {
   /** Photo 16:9 dans /public/passions. */
   image?: string;
   text: string;
+  /** Lien optionnel : rend la carte cliquable (ex. la galerie photo). */
+  href?: string;
 }
 
 // Expérience professionnelle, du plus récent au plus ancien.
@@ -129,6 +131,12 @@ export const formation: Formation[] = [
 
 // Passions - section plus personnelle.
 export const passions: Passion[] = [
+  {
+    title: 'Photographie',
+    image: '/passions/photographie.svg',
+    text: 'À côté du code, j’aime composer et capturer : cadrage, lumière, retouche. Un œil que je retrouve aussi dans le design de mes interfaces.',
+    href: '/galerie',
+  },
   {
     title: 'Domotique, embarqué & matériel',
     image: '/passions/switch.png',

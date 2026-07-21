@@ -5,7 +5,7 @@ stack: ["JavaScript", "HTML", "CSS"]
 image: "/projects/demineur.jpg"
 demo: "https://jami-inf.github.io/demineur_JS/"
 github: "https://github.com/Jami-INF/demineur_JS"
-order: 8
+order: 6
 featured: false
 date: "2023"
 ---

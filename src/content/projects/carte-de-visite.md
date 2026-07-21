@@ -5,7 +5,7 @@ stack: ["React", "Vite", "react-pdf", "Tailwind CSS"]
 image: "/projects/carte-visite.png"
 demo: ""
 github: "https://github.com/Jami-INF/Carte-de-visite-generator"
-order: 2
+order: 5
 featured: true
 ai: true
 date: "2026"

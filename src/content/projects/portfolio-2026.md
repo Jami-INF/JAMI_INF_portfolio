@@ -5,7 +5,7 @@ stack: ["Astro", "Tailwind CSS 4", "TypeScript", "Content Collections", "GitHub 
 image: "/projects/portfolio-2026.png"
 demo: ""
 github: ""
-order: 9
+order: 3
 featured: false
 date: "2026"
 ---

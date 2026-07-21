@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Photographie">
+  <rect width="1200" height="675" fill="#efece1"/>
+  <!-- corps d'appareil -->
+  <rect x="360" y="230" width="480" height="300" fill="none" stroke="#14130f" stroke-width="10"/>
+  <rect x="470" y="195" width="150" height="45" fill="#14130f"/>
+  <!-- objectif -->
+  <circle cx="600" cy="380" r="105" fill="none" stroke="#14130f" stroke-width="10"/>
+  <circle cx="600" cy="380" r="55" fill="none" stroke="#14130f" stroke-width="10"/>
+  <circle cx="600" cy="380" r="20" fill="#c3f53c"/>
+  <!-- déclencheur -->
+  <circle cx="785" cy="270" r="16" fill="#c3f53c"/>
+  <text x="600" y="620" font-family="'Space Mono',monospace" font-size="30" fill="#56534a" text-anchor="middle">PLACEHOLDER - PHOTO À VENIR</text>
+</svg>
