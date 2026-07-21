@@ -132,12 +132,6 @@ export const formation: Formation[] = [
 // Passions - section plus personnelle.
 export const passions: Passion[] = [
   {
-    title: 'Photographie',
-    image: '/passions/photographie.svg',
-    text: 'À côté du code, j’aime composer et capturer : cadrage, lumière, retouche. Un œil que je retrouve aussi dans le design de mes interfaces.',
-    href: '/galerie',
-  },
-  {
     title: 'Domotique, embarqué & matériel',
     image: '/passions/switch.png',
     text: 'Entre domotique, systèmes embarqués et administration de mes serveurs personnels, je bidouille autant le logiciel que le matériel - De l\'impression 3D jusqu’à la modification de consoles de jeu.',
@@ -151,6 +145,12 @@ export const passions: Passion[] = [
     title: 'Réparation & bricolage',
     image: '/passions/atelier.avif',
     text: 'La réparation d’appareils électroniques m’intéresse depuis l’enfance, une passion du bricolage transmise par mon père. Je répare tout type d’objet électronique, plus particulièrement des smartphones : dextérité, concentration et précision.',
+  },
+  {
+    title: 'Photographie',
+    image: '/passions/photographie.svg',
+    text: 'À côté du code, j’aime composer et capturer : cadrage, lumière, retouche. Un œil que je retrouve aussi dans le design de mes interfaces.',
+    href: '/galerie',
   },
   {
     title: 'Data & finance immobilière',
