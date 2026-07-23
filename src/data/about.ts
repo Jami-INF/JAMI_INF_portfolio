@@ -11,21 +11,22 @@ export interface Experience {
   type: string;
   /** Chemin du logo dans /public/experiences. */
   logo?: string;
-  /** Fond sombre derrière le logo (nécessaire si le logo est clair). */
   logoDark?: boolean;
   highlights: string[];
   stack: string[];
+  /** Lien optionnel vers un document PDF dans /public/pdf */
+  recommendation?: string;
 }
 
 export interface Formation {
   year: string;
   title: string;
   text: string;
+  place?: string;
 }
 
 export interface Passion {
   title: string;
-  /** Photo 16:9 dans /public/passions. */
   image?: string;
   text: string;
   /** Lien optionnel : rend la carte cliquable (ex. la galerie photo). */
@@ -37,24 +38,24 @@ export const experiences: Experience[] = [
   {
     period: '2024 - Aujourd’hui',
     role: 'Développeur full-stack',
-    company: 'EMIL FREY FRANCE (P.B.O) - MecaSystems',
+    company: 'EMIL FREY FRANCE (P.B.O) - Mecasystems',
     type: 'CDI',
     logo: '/experiences/EFF-logo.png',
     logoDark: false,
     highlights: [
-      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant MecaSystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…), pour éliminer les re-saisies entre systèmes. Refonte et documentation des endpoints (Swagger / OpenAPI).',
+      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant Mecasystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…) et pour éliminer les re-saisies entre systèmes. Refonte et documentation des endpoints (Swagger / OpenAPI).',
       'Développement full-stack : interfaces web (React, webdev, Windev) pour l’appli métier et l’e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs.',
-      'CI/CD : mise en place de pipelines GitLab avec runners sur environnements Linux / Docker - déploiement continu et génération automatique de la documentation d’API.',
-      'Data & bases de données : intégration des fichiers de stock, conception et évolution de bases HFSQL / SQL, optimisation de requêtes.',
-      'Performance & infrastructure : développement d’un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable et lancé depuis plusieurs postes, pour analyser le comportement des serveurs, du WAF et du load balancer, puis ajuster l’infrastructure.',
-      'Déploiement & exploitation : livraisons sur environnements Linux et Docker, mises en production, administration serveur (SSH, FTP / SFTP), scripts d’automatisation PowerShell, mise en place d’un NAS média pour les images du site.',
+      'CI/CD : mise en place de pipelines GitLab avec runners sur environnements Linux / Docker, déploiement continu et génération automatique de la documentation d’API.',
+      'Data et bases de données : intégration des fichiers de stock, conception et évolution de bases HFSQL / SQL et optimisation de requêtes.',
+      'Performance et infrastructure : développement d’un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable et lancé depuis plusieurs postes, pour analyser le comportement des serveurs, du WAF et du load balancer, puis ajuster l’infrastructure.',
+      'Déploiement et exploitation : livraisons sur environnements Linux et Docker, mises en production, administration serveur (SSH, FTP / SFTP), scripts d’automatisation PowerShell, mise en place d’un NAS média pour les images du site.',
     ],
     stack: ['React', 'WinDev / WebDev', 'HFSQL', 'REST', 'SOAP', 'GitLab CI/CD', 'Python', 'Docker', 'Linux'],
   },
   {
     period: '2023 - 2024',
     role: 'Développeur web',
-    company: 'FLAURAUD - AURILIS GROUP (MecaSystems)',
+    company: 'FLAURAUD - AURILIS GROUP Mecasystems',
     type: 'CDI',
     logo: '/experiences/FLD-logo.png',
     highlights: [
@@ -76,6 +77,7 @@ export const experiences: Experience[] = [
       'Exploitation d’API web et de données collectées par des capteurs, lus via Raspberry Pi.',
     ],
     stack: ['PHP', 'JavaScript', 'Tailwind CSS', 'Ajax / jQuery', 'MySQL', 'PostgreSQL', 'Raspberry Pi'],
+    recommendation: '/pdf/lettre-recommandation-jami-infante.pdf',
   },
   {
     period: 'Juil. - Août 2022',
@@ -102,7 +104,6 @@ export const experiences: Experience[] = [
   },
 ];
 
-// Compétences groupées - front-end en premier (orientation React / TypeScript).
 export const skills: Record<string, string[]> = {
   'Front-end': ['React', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Tailwind CSS', 'Vue.js'],
   'Back-end & API': ['API REST', 'SOAP', 'Swagger / OpenAPI', 'Node.js / Express', 'PHP', 'Symfony', 'MySQL', 'PostgreSQL', 'MongoDB', 'HFSQL'],
@@ -110,41 +111,42 @@ export const skills: Record<string, string[]> = {
   'DevOps & outils': ['Docker', 'GitLab CI/CD', 'Git / GitHub', 'Linux', 'VS Code', 'Postman', 'Bruno'],
 };
 
-// Formation, du plus récent au plus ancien.
 export const formation: Formation[] = [
   {
     year: '2022 - 2023',
     title: 'Licence pro Application Web',
     text: 'Développement de services web (Servlet/JSP, Spring Boot, Quarkus), applications PHP / Symfony, ReactJS, React Native. Bases de données SQL et noSQL, IoT (ESP, LoRa, Sigfox), gestion de projet, tests unitaires et d’intégration.',
+    place: 'UCA - Université Clermont Auvergne',
   },
   {
     year: '2020 - 2022',
     title: 'DUT Informatique',
     text: 'C, programmation orientée objets (Java, C#, C++), IHM (XAML, XML), UML, Merise, .NET, Linux, Shell, bases de données (PL/SQL, SQL, PRO-C Oracle), programmation web (PHP, JS, HTML, CSS).',
+    place: 'UCA - Université Clermont Auvergne',
   },
   {
     year: '2019 - 2020',
     title: 'Baccalauréat STI2D option SIN',
     text: 'Option Système d’Information et Numérique : Arduino, Python, réseau, codages binaire, hexadécimal, ASCII.',
+    place: 'Lycée Lafayette - Clermont-Ferrand',
   },
 ];
 
-// Passions - section plus personnelle.
 export const passions: Passion[] = [
   {
-    title: 'Domotique, embarqué & matériel',
+    title: 'Domotique, embarqué et matériel',
     image: '/passions/switch.png',
-    text: 'Entre domotique, systèmes embarqués et administration de mes serveurs personnels, je bidouille autant le logiciel que le matériel - De l\'impression 3D jusqu’à la modification de consoles de jeu.',
+    text: 'Entre domotique, systèmes embarqués et administration de mes serveurs personnels, je bidouille autant le logiciel que le matériel. De l\'impression 3D jusqu’à la modification de consoles de jeu.',
   },
   {
     title: 'Mécanique automobile',
     image: '/passions/mecanique.jpg',
-    text: 'Grand fan d’automobile et assez manuel, j’ai appris par moi-même, à l’aide d’internet, à faire l’entretien de ma voiture personnelle ainsi que de celle de mes parents. Cette passion prend beaucoup de temps mais est très gratifiante.',
+    text: 'Grand fan d’automobile et assez manuel, j’ai appris par moi-même à l’aide d’internet, à faire l’entretien de ma voiture personnelle ainsi que de celle de mes parents. Cette passion de la mécanique prend beaucoup de temps mais me permet d\'apprendre beaucoup de choses et surtout de faire des économies.',
   },
   {
-    title: 'Réparation & bricolage',
+    title: 'Réparation et bricolage',
     image: '/passions/atelier.avif',
-    text: 'La réparation d’appareils électroniques m’intéresse depuis l’enfance, une passion du bricolage transmise par mon père. Je répare tout type d’objet électronique, plus particulièrement des smartphones : dextérité, concentration et précision.',
+    text: 'La réparation d’appareils électroniques m’intéresse depuis l’enfance, une passion pour le bricolage transmise par mon père. Je répare tout type d’objet électronique, plus particulièrement des smartphones : dextérité, concentration et précision.',
   },
   {
     title: 'Photographie',
@@ -155,7 +157,7 @@ export const passions: Passion[] = [
   {
     title: 'Data & finance immobilière',
     image: '/passions/immo.png',
-    text: 'Je m’intéresse à l’investissement et à la fiscalité immobilière, et j’aime relier le code à cette logique métier : c’est de là qu’est né Bailiz, mon outil de gestion locative.',
+    text: 'Je m’intéresse à l’investissement et à la fiscalité immobilière. C’est de qu’est née mon outil de gestion locative Bailiz qui relie le code a cette logique métier.',
   },
   {
     title: 'Sport en salle',

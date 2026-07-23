@@ -55,5 +55,16 @@ const { experience: exp } = Astro.props;
         </li>
       ))}
     </ul>
+
+    {exp.recommendation && (
+      <a
+        href={exp.recommendation}
+        target="_blank"
+        rel="noopener"
+        class="link-brutal mt-5 inline-block font-mono text-sm font-bold"
+      >
+        Lettre de recommandation ↗
+      </a>
+    )}
   </div>
 </li>

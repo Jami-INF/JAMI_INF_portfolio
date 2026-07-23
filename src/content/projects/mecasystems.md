@@ -35,13 +35,13 @@ full-stack**, du back-end jusqu'au support.
 - **Data & bases de données** - Intégration des fichiers de stock, conception
   et évolution des bases HFSQL / SQL, optimisation des requêtes et fiabilité
   des données.
-- **Performance & infrastructure** - Développement d'un outil de test de
+- **Performance et infrastructure** - Développement d'un outil de test de
   charge en Python (Selenium, multi-thread) compilé en exécutable et lancé en
   parallèle depuis plusieurs postes, pour simuler commandes et navigation,
   analyser le comportement des serveurs, du WAF et du load balancer, et
   ajuster l'infrastructure ; mise en place d'un NAS média pour les images du
   site.
-- **Partie publique & référencement** - Réalisation de la landing page
+- **Partie publique et référencement** - Réalisation de la landing page
   publique du produit et travail sur le référencement (SEO) du site.
 
 ## Contexte

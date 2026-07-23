@@ -27,7 +27,7 @@ import { SITE } from '../consts';
     </div>
 
     <p class="mt-8 max-w-2xl leading-relaxed text-ink/80">
-      Passé par l'alternance puis en poste, j'ai construit des applications
+      Passé par l'alternance puis en poste, je construit des applications
       complètes en environnement pro - API, bases de données, interfaces - et je
       continue d'explorer de nouvelles technologies à travers mes projets
       personnels.
@@ -87,7 +87,10 @@ import { SITE } from '../consts';
               </Label>
               <div>
                 <Heading as="h3" size="xs">{item.title}</Heading>
-                <p class="mt-1 text-sm leading-relaxed text-ink/80">{item.text}</p>
+                {item.place && (
+                  <p class="mt-1 font-mono text-sm text-muted">{item.place}</p>
+                )}
+                <p class="mt-2 text-sm leading-relaxed text-ink/80">{item.text}</p>
               </div>
             </li>
           ))
