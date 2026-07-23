@@ -20,7 +20,7 @@ full-stack**, du back-end jusqu'au support.
 
 ## Mes principales contributions
 
-- **Interfaçage DMS** - Développement des web services **REST** et maintenance
+- **Interfaçage outils d'atelier/DMS** - Développement des web services **REST** et maintenance
   des web services **SOAP** qui connectent MecaSystems aux logiciels de gestion
   des ateliers (comptabilité, commandes, devis…), afin de supprimer les
   re-saisies entre systèmes. Interface entre Le site de vente en ligne et des tablettes de diagnostique mécanique automobile permettant d'identifier la voiture en directe et de passer des commandes directement depuis la tablette. Refonte et documentation des endpoints

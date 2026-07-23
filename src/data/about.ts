@@ -43,8 +43,8 @@ export const experiences: Experience[] = [
     logo: '/experiences/EFF-logo.png',
     logoDark: false,
     highlights: [
-      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant Mecasystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…) et pour éliminer les re-saisies entre systèmes. Refonte et documentation des endpoints (Swagger / OpenAPI).',
-      'Développement full-stack : interfaces web (React, webdev, Windev) pour l’appli métier et l’e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs.',
+      'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant Mecasystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…) et pour éliminer les re-saisies entre systèmes et optimiser les process. Refonte et documentation des endpoints (Swagger / OpenAPI).',
+      'Développement full-stack : interfaces web (React, webdev, Windev) pour l’appli métier et l’e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs en plusieurs langues (Français, Allemand, Italien et Anglais).',
       'CI/CD : mise en place de pipelines GitLab avec runners sur environnements Linux / Docker, déploiement continu et génération automatique de la documentation d’API.',
       'Data et bases de données : intégration des fichiers de stock, conception et évolution de bases HFSQL / SQL et optimisation de requêtes.',
       'Performance et infrastructure : développement d’un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable et lancé depuis plusieurs postes, pour analyser le comportement des serveurs, du WAF et du load balancer, puis ajuster l’infrastructure.',
@@ -54,7 +54,7 @@ export const experiences: Experience[] = [
   },
   {
     period: '2023 - 2024',
-    role: 'Développeur web',
+    role: 'Développeur full-stack',
     company: 'FLAURAUD - AURILIS GROUP Mecasystems',
     type: 'CDI',
     logo: '/experiences/FLD-logo.png',
