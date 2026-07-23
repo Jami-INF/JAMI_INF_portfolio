@@ -23,7 +23,7 @@ full-stack**, du back-end jusqu'au support.
 - **Interfaçage DMS** - Développement des web services **REST** et maintenance
   des web services **SOAP** qui connectent MecaSystems aux logiciels de gestion
   des ateliers (comptabilité, commandes, devis…), afin de supprimer les
-  re-saisies entre systèmes. Refonte et documentation des endpoints
+  re-saisies entre systèmes. Interface entre Le site de vente en ligne et des tablettes de diagnostique mécanique automobile permettant d'identifier la voiture en directe et de passer des commandes directement depuis la tablette. Refonte et documentation des endpoints
   (**Swagger / OpenAPI**).
 - **CI/CD** - Mise en place de pipelines **GitLab** avec runners sur
   environnements Linux / Docker : déploiement continu et génération automatique
@@ -39,7 +39,7 @@ full-stack**, du back-end jusqu'au support.
   charge en Python (Selenium, multi-thread) compilé en exécutable et lancé en
   parallèle depuis plusieurs postes, pour simuler commandes et navigation,
   analyser le comportement des serveurs, du WAF et du load balancer, et
-  ajuster l'infrastructure ; mise en place d'un NAS média pour les images du
+  ajuster l'infrastructure. Mise en place d'un NAS média pour les images du
   site.
 - **Partie publique et référencement** - Réalisation de la landing page
   publique du produit et travail sur le référencement (SEO) du site.
