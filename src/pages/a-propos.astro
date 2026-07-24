@@ -9,6 +9,8 @@ import Heading from '../components/Heading.astro';
 import Tag from '../components/Tag.astro';
 import { experiences, skills, formation, passions } from '../data/about';
 import { SITE } from '../consts';
+import FramedImage from '../components/FramedImage.astro';
+
 ---
 
 <Base
@@ -48,7 +50,7 @@ import { SITE } from '../consts';
     <Label as="p" muted class="mt-6 tracking-wide">{SITE.location}</Label>
 
     <div class="mt-16">
-      <SectionHeading number="02.1" title="Expérience" as="h2" />
+      <SectionHeading number="02.1" title="Expériences" as="h2" />
       <ol class="mt-8 space-y-6">
         {experiences.map((exp) => <ExperienceCard experience={exp} />)}
       </ol>
@@ -77,7 +79,7 @@ import { SITE } from '../consts';
     </div>
 
     <div class="mt-16">
-      <SectionHeading number="02.3" title="Formation" as="h2" />
+      <SectionHeading number="02.3" title="Formations" as="h2" />
       <ol class="mt-8 divide-y-2 divide-line border-2 border-line">
         {
           formation.map((item) => (
@@ -86,10 +88,22 @@ import { SITE } from '../consts';
                 {item.year}
               </Label>
               <div>
-                <Heading as="h3" size="xs">{item.title}</Heading>
-                {item.place && (
-                  <p class="mt-1 font-mono text-sm text-muted">{item.place}</p>
-                )}
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <Heading as="h3" size="xs">{item.title}</Heading>
+                    {item.place && (
+                      <p class="mt-1 font-mono text-sm text-muted">{item.place}</p>
+                    )}
+                  </div>
+                  {item.logo && (
+                    <FramedImage
+                      src={item.logo}
+                      alt={`Logo ${item.title}`}
+                      variant="thumb"
+                      class="bg-white"
+                    />
+                  )}
+                </div>
                 <p class="mt-2 text-sm leading-relaxed text-ink/80">{item.text}</p>
               </div>
             </li>

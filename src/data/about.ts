@@ -21,6 +21,8 @@ export interface Experience {
 export interface Formation {
   year: string;
   title: string;
+  /** Chemin du logo dans /public/formations. */
+  logo?: string;
   text: string;
   place?: string;
 }
@@ -44,7 +46,7 @@ export const experiences: Experience[] = [
     logoDark: false,
     highlights: [
       'Interfaçage DMS : développement des web services REST et maintenance des web services SOAP connectant Mecasystems aux logiciels de gestion des ateliers (comptabilité, commandes, devis…) et pour éliminer les re-saisies entre systèmes et optimiser les process. Refonte et documentation des endpoints (Swagger / OpenAPI).',
-      'Développement full-stack : interfaces web (React, webdev, Windev) pour l\'appli métier et l\'e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs en plusieurs langues (Français, Allemand, Italien et Anglais).',
+      'Développement full-stack : interfaces web (React, webdev, Windev) pour l\'appli métier et l\'e-commerce, logique métier, API REST, échanges JSON et automatisation de flux. Plateforme déployée en marque blanche pour plusieurs fournisseurs et en plusieurs langues (Français, Allemand, Italien et Anglais).',
       'CI/CD : mise en place de pipelines GitLab avec runners sur environnements Linux / Docker, déploiement continu et génération automatique de la documentation d\'API.',
       'Data et bases de données : intégration des fichiers de stock, conception et évolution de bases HFSQL / SQL et optimisation de requêtes.',
       'Performance et infrastructure : développement d\'un outil de test de charge en Python (Selenium, multi-thread) compilé en exécutable et lancé depuis plusieurs postes, pour analyser le comportement des serveurs, du WAF et du load balancer, puis ajuster l\'infrastructure.',
@@ -116,18 +118,21 @@ export const formation: Formation[] = [
   {
     year: '2022 - 2023',
     title: 'Licence pro Application Web',
+    logo: '/formations/uca-logo.jpg',
     text: 'Développement de services web (Servlet/JSP, Spring Boot, Quarkus), applications PHP / Symfony, ReactJS, React Native. Bases de données SQL et noSQL, IoT (ESP, LoRa, Sigfox), gestion de projet, tests unitaires et d\'intégration.',
     place: 'UCA - Université Clermont Auvergne',
   },
   {
     year: '2020 - 2022',
     title: 'DUT Informatique',
+    logo: '/formations/uca-logo.jpg',
     text: 'C, programmation orientée objets (Java, C#, C++), IHM (XAML, XML), UML, Merise, .NET, Linux, Shell, bases de données (PL/SQL, SQL, PRO-C Oracle), programmation web (PHP, JS, HTML, CSS).',
     place: 'UCA - Université Clermont Auvergne',
   },
   {
     year: '2019 - 2020',
     title: 'Baccalauréat STI2D option SIN',
+    logo: '/formations/lafayette-logo.png',
     text: 'Option Système d\'Information et Numérique : Arduino, Python, réseau, codages binaire, hexadécimal, ASCII.',
     place: 'Lycée Lafayette - Clermont-Ferrand',
   },
