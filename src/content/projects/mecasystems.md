@@ -35,6 +35,10 @@ full-stack**, du back-end jusqu'au support.
 - **Data & bases de données** - Intégration des fichiers de stock, conception
   et évolution des bases HFSQL / SQL, optimisation des requêtes et fiabilité
   des données.
+- **Paiement CB sécurisé** - Intégration et maintenance du module de paiement CB de la banque.
+  Gestion du flux complet avec double retour banque front et back permettant de valider la 
+  commande même si le contexte n'est plus bon au moment du retour. Gestion du retour banque 
+  sur le bon serveur malgrès le load-balancer en parralèle avec l'équipe infra et sécurité. 
 - **Performance et infrastructure** - Développement d'un outil de test de
   charge en Python (Selenium, multi-thread) compilé en exécutable et lancé en
   parallèle depuis plusieurs postes, pour simuler commandes et navigation,
