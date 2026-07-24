@@ -1,6 +1,7 @@
 ---
 title: "Batronome - métronome visuel"
 description: "Métronome visuel pour orchestre : un anneau de 60 LEDs bat la mesure, piloté par Arduino, dans un boîtier imprimé en 3D alimenté par une batterie récupérée. Projet de fin d'études du Bac STI2D SIN."
+metaDescription: "Métronome visuel à 60 LEDs piloté par Arduino, boîtier imprimé en 3D. Projet de fin d'études Bac STI2D SIN. Électronique et C/C++."
 stack: ["Arduino", "C / C++", "Électronique", "Impression 3D", "Li-ion 18650"]
 image: "/projects/batronome.jpg"
 demo: ""

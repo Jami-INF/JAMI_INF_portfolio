@@ -1,6 +1,7 @@
 ---
 title: "Générateur de carte de visite"
 description: "Application web pour composer des cartes de visite et les exporter en PDF prêt à imprimer : formats maison et professionnel, QR code intégré, aperçu en direct. Développée en pilotant l'IA à partir d'un besoin spécifié."
+metaDescription: "Application React pour créer des cartes de visite et les exporter en PDF prêt à imprimer : QR code, aperçu en direct. Conçue en pilotant l'IA."
 stack: ["React", "Vite", "react-pdf", "Tailwind CSS"]
 image: "/projects/carte-visite.png"
 demo: ""

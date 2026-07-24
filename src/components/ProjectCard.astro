@@ -34,7 +34,7 @@ const { number, title, description, stack, image, href, date, ai = false } = Ast
   </Label>
 
   <a href={href} class="block border-b-2 border-line" tabindex="-1" aria-hidden="true">
-    <FramedImage src={image} frame="none" />
+    <FramedImage src={image} alt={`Aperçu du projet ${title}`} frame="none" />
   </a>
 
   <div class="flex flex-1 flex-col gap-4 p-4">

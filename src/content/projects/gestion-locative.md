@@ -1,6 +1,7 @@
 ---
 title: "Bailiz - Gestion locative"
 description: "Application 100 % hors-ligne pour bailleur LMNP : baux conformes, états des lieux comparatifs avec photos, signatures horodatées et hachées. Spécifiée en cahier des charges complet, développée en pilotant l'IA."
+metaDescription: "Application PWA hors-ligne pour bailleur LMNP : baux conformes, états des lieux photo, signatures horodatées. React, TypeScript, IndexedDB."
 stack: ["React", "TypeScript", "Vite", "Dexie (IndexedDB)", "react-pdf", "PWA"]
 image: "/projects/bailiz.png"
 demo: "https://jami-inf.github.io/Bailiz_gestion_immo/"
