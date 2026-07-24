@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" fill="#14130f"/>
-  <rect x="2" y="2" width="28" height="28" fill="none" stroke="#c3f53c" stroke-width="2"/>
-  <text x="16" y="23" font-family="'Space Grotesk',sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#c3f53c">JI</text>
+  <path transform="translate(1.560 24.167) scale(0.02381 -0.02381)" fill="#efece1" d="M296 -14Q191 -14 126.0 43.5Q61 101 61 210V276H193V210Q193 164 219.5 137.0Q246 110 292 110Q336 110 360.5 136.0Q385 162 385 210V576H313V700H577V576H517V210Q517 102 457.5 44.0Q398 -14 296 -14ZM684 0V126H852V574H684V700H1152V574H984V126H1152V0Z"/>
 </svg>
