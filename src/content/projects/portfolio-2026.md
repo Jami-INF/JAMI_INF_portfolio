@@ -25,7 +25,7 @@ crème / encre / vert acide, typographies Space Grotesk et Space Mono, cadres
 - **Design system de composants** - La typographie et les motifs récurrents
   (titres display, labels monospace, boutons, images encadrées, tags,
   surlignage accent) n'existent qu'à un seul endroit, sous forme de composants
-  Astro réutilisables. Ajouter une page, c'est composer - pas copier-coller.
+  Astro réutilisables.
 - **Contenu séparé de la présentation** - Un fichier Markdown par projet
   (Content Collections), avec un frontmatter **validé par un schéma zod au
   build** : la grille des projets, les fiches détaillées et les projets mis en
@@ -42,6 +42,6 @@ crème / encre / vert acide, typographies Space Grotesk et Space Mono, cadres
 
 ## Ce que j'ai appris
 
-Formaliser un design system minimal mais strict - et constater qu'un site
+Formaliser un design system minimal mais strict. Constater qu'un site
 peut être expressif visuellement tout en restant sobre techniquement : du
-HTML, du CSS, et presque rien d'autre.
+HTML, du CSS, et presque rien d'autre. Création d'un site portfolio montrable à des recruteurs, contenant bien plus qu'un simple CV, également un exemple de ce que je sais faire.
