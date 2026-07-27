@@ -67,7 +67,7 @@ const breadcrumb = {
       </ul>
 
       {
-        (data.demo || data.github) && (
+        (data.demo || data.github || data.rapport) && (
           <div class="mt-8 flex flex-wrap gap-4">
             {data.demo && (
               <Button href={data.demo} variant="solid" size="sm" external>
@@ -77,6 +77,11 @@ const breadcrumb = {
             {data.github && (
               <Button href={data.github} size="sm" external>
                 GitHub ↗
+              </Button>
+            )}
+            {data.rapport && (
+              <Button href={data.rapport} variant="solid" size="sm" external>
+                Rapport ↗
               </Button>
             )}
           </div>

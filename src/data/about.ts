@@ -147,21 +147,21 @@ export const passions: Passion[] = [
   {
     title: 'Mécanique automobile',
     image: '/passions/mecanique.jpg',
-    text: 'Grand fan d\'automobile et assez manuel, j\'ai appris par moi-même à l\'aide d\'internet, à faire l\'entretien de ma voiture personnelle ainsi que de celle de mes parents. Cette passion de la mécanique prend beaucoup de temps mais me permet d\'apprendre beaucoup de choses et surtout de faire des économies.',
+    text: 'Grand fan d\'automobile et assez manuel, j\'ai appris par moi-même à l\'aide d\'internet, à faire l\'entretien de ma voiture personnelle ainsi que de celle de mes parents. Cette passion de la mécanique prend beaucoup de temps et me permet d\'apprendre beaucoup de choses et surtout de faire des économies.',
   },
   {
     title: 'Réparation et bricolage',
     image: '/passions/atelier.avif',
     text: 'La réparation d\'appareils électroniques m\'intéresse depuis l\'enfance, une passion pour le bricolage transmise par mon père. Je répare tout type d\'objet électronique, plus particulièrement des smartphones : dextérité, concentration et précision.',
   },
+  //{
+  //  title: 'Photographie',
+  //  image: '/passions/photographie.svg',
+  //  text: 'À côté du code, j\'aime composer et capturer : cadrage, lumière, retouche. Un œil que je retrouve aussi dans le design de mes interfaces.',
+  //  href: '/galerie',
+ //},
   {
-    title: 'Photographie',
-    image: '/passions/photographie.svg',
-    text: 'À côté du code, j\'aime composer et capturer : cadrage, lumière, retouche. Un œil que je retrouve aussi dans le design de mes interfaces.',
-    href: '/galerie',
-  },
-  {
-    title: 'Data & finance immobilière',
+    title: 'Data et finance immobilière',
     image: '/passions/immo.png',
     text: 'Je m\'intéresse à l\'investissement et à la fiscalité immobilière. C\'est de qu\'est née mon outil de gestion locative Bailiz qui relie le code a cette logique métier.',
   },

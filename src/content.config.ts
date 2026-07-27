@@ -21,6 +21,7 @@ const projects = defineCollection({
     // pour ne pas casser le build si un lien n'est pas encore renseigné.
     demo: z.preprocess((v) => (v === '' ? undefined : v), z.string().url().optional()),
     github: z.preprocess((v) => (v === '' ? undefined : v), z.string().url().optional()),
+    rapport: z.preprocess((v) => (v === '' ? undefined : v), z.string().url().optional()),
     // Ordre d'affichage (croissant) et mise en avant sur l'accueil.
     order: z.number().default(99),
     featured: z.boolean().default(false),
