@@ -5,7 +5,7 @@ metaDescription: "Site vitrine statique développé de A à Z : direction artist
 stack: ["Astro", "Tailwind CSS", "TypeScript", "sharp", "GitHub Actions"]
 image: "/projects/mathis-detroussat.png"
 demo: "https://mathis-detroussat.fr"
-github: ""
+github: "https://github.com/Jami-INF/Mathis_DETR_Portfolio"
 order: 1
 featured: true
 date: "2026"

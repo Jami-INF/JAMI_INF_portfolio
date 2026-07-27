@@ -4,8 +4,8 @@ description: "Ce site : portfolio statique néo-brutaliste construit avec Astro 
 metaDescription: "Portfolio statique néo-brutaliste en Astro et Tailwind CSS 4 : design system, contenu Markdown, SEO et accessibilité soignés."
 stack: ["Astro", "Tailwind CSS 4", "TypeScript", "Content Collections", "GitHub Actions"]
 image: "/projects/portfolio-2026.png"
-demo: ""
-github: ""
+demo: "https://jami-infante.fr/"
+github: "https://github.com/Jami-INF/JAMI_INF_portfolio"
 order: 3
 featured: false
 date: "2026"
