@@ -76,10 +76,12 @@ export const experiences: Experience[] = [
     type: 'Alternance',
     logo: '/experiences/NT-logo.png',
     highlights: [
-      'Conception, développement et maintenance de sites web et d\'outils internes pour des clients.',
-      'Exploitation d\'API web et de données collectées par des capteurs, lus via Raspberry Pi.',
+      'Conception et développement d\'une application web full-stack de gestion des demandes d\'extraction de données : remplacement d\'un processus manuel par une interface complète - front-end, back-end PHP (MVC), base de données, gestion des rôles, notifications par mail et sécurité.',
+      'Mise en place d\'un système d\'acquisition de données via Raspberry Pi (lecture de capteurs et exploitation d\'API web) avec remontée automatisée vers une application web.',
+      'Développement d\'un outil de visualisation de données brutes : tracé dynamique de différents scénarios pour en faciliter l\'analyse.',
+      'Maintenance et évolutions de l\'outil interne de gestion de licences développé pendant mon stage : corrections, ajustements et nouvelles fonctionnalités selon les besoins de l\'équipe.',
     ],
-    stack: ['PHP', 'JavaScript', 'Tailwind CSS', 'Ajax / jQuery', 'MySQL', 'PostgreSQL', 'Raspberry Pi'],
+    stack: ['PHP', 'JavaScript', 'Tailwind CSS', 'Ajax / jQuery', 'API REST', 'MySQL', 'PostgreSQL', 'Raspberry Pi'],
     recommendation: '/pdf/lettre-recommandation-jami-infante.pdf',
   },
   {
@@ -101,9 +103,11 @@ export const experiences: Experience[] = [
     type: 'Stage',
     logo: '/experiences/NT-logo.png',
     highlights: [
-      'Développement d\'un outil interne de gestion de licence client : analyse de l\'existant, analyse des besoins, développement en PHP suivant le modèle MVC.',
+      'Conception et développement d\'un outil web interne de gestion de licences (PHP, modèle MVC) : analyse de l\'existant et des besoins, architecture de l\'application, gestion des contacts, entreprises, licences et utilisateurs avec système de rôles.',
+      'Fonctionnalités avancées : génération de devis personnalisés au format Word (PHPWord), envoi automatique de mails de rappel (PHPMailer), affichage dynamique en Ajax et carte interactive (OpenStreetMap).',
+      'Rédaction d\'une documentation utilisateur intégrée à l\'application.',
     ],
-    stack: ['PHP (MVC)', 'JavaScript', 'MySQL', 'PHPMailer', 'PHPOffice'],
+    stack: ['PHP (MVC)', 'JavaScript', 'Ajax', 'MySQL', 'PHPMailer', 'PHPOffice', 'OpenStreetMap'],
   },
 ];
 
