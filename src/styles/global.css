@@ -24,6 +24,22 @@
   --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
 }
 
+/* Mode sombre : on redéfinit la même palette, tout le reste (utilitaires
+   bg-bg, text-ink, border-line…) suit automatiquement via les var(). */
+:root[data-theme="dark"] {
+  --color-bg: #16150f;         /* fond crème → près-noir chaud */
+  --color-ink: #f0ede2;        /* texte quasi-noir → crème clair */
+  --color-muted: #ada899;      /* gris chaud éclairci (AA sur fond sombre) */
+  --color-line: #f0ede2;       /* bordures claires */
+  --color-accent: #c3f53c;     /* accent inchangé, il ressort déjà en sombre */
+  --color-accent-ink: #14130f; /* texte sombre sur l'accent vif */
+}
+
+/* Bascule des icônes du bouton de thème selon le mode actif. */
+.theme-icon-sun { display: none; }
+:root[data-theme="dark"] .theme-icon-moon { display: none; }
+:root[data-theme="dark"] .theme-icon-sun { display: inline; }
+
 @layer base {
   html {
     scroll-behavior: smooth;
