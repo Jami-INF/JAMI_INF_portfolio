@@ -11,7 +11,7 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     // Meta description SEO optionnelle (≤ 160 car.). Si absente, on retombe
-    // sur `description` — pratique quand celle-ci est longue pour l'affichage.
+    // sur `description`
     metaDescription: z.string().optional(),
     // Pile technique affichée en monospace sous forme de tags.
     stack: z.array(z.string()),

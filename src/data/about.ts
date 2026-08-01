@@ -27,6 +27,12 @@ export interface Formation {
   place?: string;
 }
 
+export interface Language {
+  name: string;
+  /** Niveau : qualitatif et/ou CECRL (ex. « Professionnel (B2) »). */
+  level: string;
+}
+
 export interface Passion {
   title: string;
   image?: string;
@@ -112,11 +118,20 @@ export const experiences: Experience[] = [
 ];
 
 export const skills: Record<string, string[]> = {
-  'Front-end': ['React', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Tailwind CSS', 'Vue.js'],
-  'Back-end & API': ['API REST', 'SOAP', 'Swagger / OpenAPI', 'Node.js / Express', 'PHP', 'Symfony', 'MySQL', 'PostgreSQL', 'MongoDB', 'HFSQL'],
-  Langages: ['JavaScript / TypeScript', 'PHP', 'Python', 'PowerShell', 'Java', 'C', 'C#'],
-  'DevOps & outils': ['Docker', 'GitLab CI/CD', 'Git / GitHub', 'Linux', 'VS Code', 'Postman', 'Bruno'],
+  'Front-end': ['React', 'React Native', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Tailwind CSS', 'Astro', 'Vite', 'Ajax / jQuery'],
+  'Back-end & API': ['PHP', 'Symfony', 'Node.js / Express', 'Java (Spring Boot, Quarkus)', 'WinDev / WebDev', 'API REST', 'SOAP', 'Swagger / OpenAPI'],
+  'Bases de données': ['MySQL', 'PostgreSQL', 'SQLite / IndexedDB', 'MongoDB', 'HFSQL', 'PL/SQL (Oracle)'],
+  Langages: ['JavaScript / TypeScript', 'PHP', 'Python', 'Java', 'C / C++', 'C#', 'Bash', 'PowerShell'],
+  'DevOps & outils': ['Docker', 'GitLab CI/CD', 'GitHub Actions', 'Git / GitHub', 'Linux', 'Selenium', 'Postman/Bruno', 'VS Code'],
+  'IoT & embarqué': ['Arduino', 'Raspberry Pi', 'ESP32', 'LoRa / Sigfox', 'Électronique', 'Impression 3D'],
+  'Data & IA': ['Python', 'OpenCV', 'TensorFlow', 'Keras', 'Computer Vision'],
 };
+
+export const languages: Language[] = [
+  { name: 'Français', level: 'Natif' },
+  { name: 'Anglais', level: 'Professionnel (B2)' },
+  { name: 'Espagnol', level: 'Notions (A2)' },
+];
 
 export const formation: Formation[] = [
   {
